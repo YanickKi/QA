@@ -1,0 +1,7 @@
+\selectlanguage *{german}
+\beamer@sectionintoc {1}{Einleitung}{3}{0}{1}
+\beamer@sectionintoc {2}{Simulated und quantum annealing}{5}{0}{2}
+\beamer@sectionintoc {3}{Quadratic unconstrained binary optimization}{13}{0}{3}
+\beamer@sectionintoc {4}{Hardware embedding}{15}{0}{4}
+\beamer@sectionintoc {5}{Beispiel: Anwendung in der Logistik}{20}{0}{5}
+\beamer@sectionintoc {6}{Zusammenfassung und Ausblick}{22}{0}{6}
