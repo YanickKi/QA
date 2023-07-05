@@ -23,6 +23,8 @@
 \usepackage{unicode-math}
 \usepackage{xfrac}
 
+\usepackage{environ}
+
 \usepackage{hyperref}
 \usepackage{bookmark}
 \usepackage{graphicx}
@@ -86,6 +88,13 @@ per-mode=symbol-or-fraction, % m/s im Text, sonst \frac
   {\par%
     \usebeamertemplate{block end}%
   \end{actionenv}}
+
+
+\NewEnviron{myequation}{%
+  \begin{equation*}
+  \scalebox{1.5}{$\BODY$}
+  \end{equation*}
+}
 
 %----------------------------------------
 %Align Equations to LEFT MARGIN (use \mathleft then \mathcenter)
@@ -159,6 +168,11 @@ per-mode=symbol-or-fraction, % m/s im Text, sonst \frac
  \end{columns}
 \end{frame}
 
+\begin{frame}{Motivation}
+  \centering
+  \includegraphics[width = 0.6\textwidth]{Plots/LA.jpg}
+\end{frame}
+
 \section{Simulated und quantum annealing}
 
 \begin{frame}{Simulated annealing}
@@ -169,7 +183,6 @@ per-mode=symbol-or-fraction, % m/s im Text, sonst \frac
       \item langsamer auskühlen \textrightarrow optimalerer Zustand (kristallin)
     \end{itemize}
     \item nutzt thermische Fluktuationen, um lokalen Minima zu entkommen
-    \item nutzt den Boltzmann-Faktor zur Bestimmung der Lösung 
     \item Wahrscheinlichkeit $P_i$ folgen Mastergleichung $\frac{dP_i}{dt} = \sum_j L_{ij} P_j$
     \begin{itemize}
       \item        $L_{ij} = 
@@ -342,6 +355,87 @@ per-mode=symbol-or-fraction, % m/s im Text, sonst \frac
 
 \section{Quadratic unconstrained binary optimization}
 
+\begin{frame}{Binäre Variable}
+  \begin{itemize}
+    \item $x \in \{0,1\}$
+    \item Beispiel: Aufenthaltsort von einem Truck
+    \item Formulierung als Graph mit $N$ Knoten $i$
+    \begin{itemize}
+      \item ordne jedem Knoten $i$ eine binäre Varibale zu
+      \item jedem Truck kann ein Vektor $x^j = (x^j_1, \ldots, x^j_N)$ von binären Variablen zugeordnet werden
+    \end{itemize}
+    \item Truck $j$ an Knoten $i$ \textrightarrow $x^j_i = 1$ sonst $x^j_k = 0$
+  \end{itemize} 
+\end{frame}
+
+\begin{frame}{Binäre Variable}
+  \begin{columns}
+    \column{0.7 \textwidth}
+      \includegraphics[width = \textwidth]{Plots/binary_1.pdf}
+    \column{0.3 \textwidth}
+  \begin{myequation}
+    \underline{x}^\text{rot} \; \; = 
+    \begin{pmatrix}
+      1 \\ 0 \\ 0 \\ 0
+    \end{pmatrix}
+  \end{myequation}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Binäre Variable}
+  \begin{columns}
+    \column{0.7 \textwidth}
+      \includegraphics[width = \textwidth]{Plots/binary_2.pdf}
+    \column{0.3 \textwidth}
+  \begin{myequation}
+    \underline{x}^\text{rot} \; \; = 
+    \begin{pmatrix}
+      0 \\ 0 \\ 1 \\ 0
+    \end{pmatrix}
+  \end{myequation}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Binäre Variable}
+  \begin{columns}
+    \column{0.7 \textwidth}
+      \includegraphics[width = \textwidth]{Plots/binary_3.pdf}
+    \column{0.3 \textwidth}
+  \begin{myequation}
+    \underline{x}^\text{rot} \; \;  = 
+    \begin{pmatrix}
+      0 \\ 0 \\ 1 \\ 0
+    \end{pmatrix}
+  \end{myequation}
+  \begin{myequation}
+    \underline{x}^\text{grün} = 
+    \begin{pmatrix}
+      1 \\ 0 \\ 0 \\ 0
+    \end{pmatrix}
+  \end{myequation}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Binäre Variable}
+  \begin{columns}
+    \column{0.7 \textwidth}
+      \includegraphics[width =  \textwidth]{Plots/binary_4.pdf}
+    \column{0.3 \textwidth}
+  \begin{myequation}
+    \underline{x}^\text{rot} \; \;  = 
+    \begin{pmatrix}
+      0 \\ 0 \\ 0 \\ 1
+    \end{pmatrix}
+  \end{myequation}
+  \begin{myequation}
+    \underline{x}^\text{grün} = 
+    \begin{pmatrix}
+      0 \\ 1 \\ 0 \\ 0
+    \end{pmatrix}
+  \end{myequation}
+  \end{columns}
+\end{frame}
+
 \begin{frame}{Quadratic unconstrained binary optimization (QUBO)}
   \begin{block}{Aufgabe}
     \center
@@ -381,13 +475,38 @@ per-mode=symbol-or-fraction, % m/s im Text, sonst \frac
 \begin{frame}{Quantum annealer von D-Wave Systems}
   \begin{itemize}
     \item D-Wave Systems als Hersteller von quantum annealer
-    \item 
+    \item Qantum Processing Unit (QPU) mit QUBITs und couplern
+    \begin{itemize}
+      \item QUBITs und coupler sind gewichtet 
+    \end{itemize}
+    \item neuste Version: 5000 QUBITs mit 15 couplern pro QUBIT
+    \item Nach annealing-Prozess die QUBIts auslesen
+    \begin{itemize}
+      \item[\textrightarrow] mögliches Energieminimum gefunden
+    \end{itemize}
   \end{itemize}
+  \vspace*{1cm}
+  Unterschied zu Quantencomputer
+    \begin{itemize}
+      \item Quantum annealer nur für kombinatorische Optimierungsprobleme
+      \item Quantencomputer nutzen Quantengatter (unitäre Operationen)
+      \begin{itemize}
+        \item kann mehr Problem lösen
+      \end{itemize}
+    \end{itemize}
+  \begin{textblock*}{5cm}(11cm, 2cm) % {block width} (coords)
+    \includegraphics[width = 4.5cm]{Plots/advantage.png}
+    \hspace*{12pt}\hbox{\scriptsize {\footnotesize\itshape \href{https://techcrunch.com/2020/09/29/d-wave-launches-its-5000-qubit-advantage-system/?guccounter=1&guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&guce_referrer_sig=AQAAABB4SLnDOFLkzRsw3QLBP_BiwlTIN9jcs7feoLJi2DljlJifaHVtboTJQonfs2ulmdbT5fTNEU2jmeVP5gqNb_JTbAo88uHq76dEKRkeHYKpmXgEykCXVF3Y_-0ElGKOQqpS-rDrEZJWjMQh3x6OqCY4Pqpfeir7y8_RZCm6FRIW}{techchrunch.com}}}
+  \end{textblock*}
+  \begin{textblock*}{3cm}(12cm,5.8cm) % {block width} (coords)
+    \includegraphics[width = 3cm]{Plots/QPU.jpg}
+    \hspace*{12pt}\hbox{\scriptsize {\footnotesize\itshape \href{https://www.dwavesys.com/solutions-and-products/systems/}{dwavesys.com}}}
+  \end{textblock*}  
 \end{frame}
 
 \begin{frame}{Embedding}
   \begin{itemize}
-    \item D-Wave's Quantenhardware kann als Graph $U$ gesehen werden
+    \item D-Wave's QPU kann als Graph $U$ gesehen werden
     \begin{itemize}
       \item Gewichtete Vertices (QUBIT) $i \in V(U)$ 
       \item Gewichtete Kanten (coupler) $ij \in E(U)$
@@ -413,7 +532,7 @@ per-mode=symbol-or-fraction, % m/s im Text, sonst \frac
 \end{frame}
 
 \begin{frame}{Embedding}
-  \begin{textblock*}{5cm}(9.2cm, 1.9cm) % {block width} (coords)
+  \begin{textblock*}{5cm}(10cm, 1.9cm) % {block width} (coords)
     \includegraphics[width = 5.5cm]{Plots/qubo_ising.png}
     \hspace*{12pt}\hbox{\scriptsize {\footnotesize\itshape \href{https://doi.org/10.1016/j.physrep.2012.10.002}{V. Choi, \textit{D-Wave Systems Inc.} (2008)}}}
   \end{textblock*}
@@ -479,13 +598,58 @@ per-mode=symbol-or-fraction, % m/s im Text, sonst \frac
   \end{textblock*}
 \end{frame}
 
-\section{Beispiel: Anwendung in der Logistik}
-\begin{frame}{Fallbeispiel aus Weinberg et al.}
- Hier nicht zu sehr ins Detail gehen aber zumindest die Idee und Herangehensweise zeigen
+\section{Fallbeispiel Aisin Corporation}
+\begin{frame}{Fallbeispiel Aisin Corporation}
+  \begin{textblock*}{5cm}(11cm, 2cm) % {block width} (coords)
+    \includegraphics[width = 7cm]{Plots/ex.pdf}
+  \end{textblock*}
+  \begin{itemize}
+    \item Zeit für Route $\xi$ : $\text{time}(\xi) = \sum_{t=1}^{k-1} T_{\xi_t, \xi_{t+1}}$
+    \item off-board-demand $D_{ij}$, der von $i$ nach $j$ gebracht werden muss
+  \end{itemize}
+  Terme für QUBO-Formulierung:
+  \begin{itemize}
+    \item $f_\text{local} (\{ x_i \}) = A_\text{local} \sum_t \left ( 1-\sum_i x_{it} \right )^2$
+    \item $f_\text{time} (\{ x_i \}) = A_\text{time} \sum_{ijt} T_{ij} x_{it}x_{jt+1}$
+    \item $f_\text{demand} (\{ x_i \}) = - A_\text{demand} \sum_{ijt} \sum_{\delta = 1}^{\delta_*(t)} D_{ij} x_{it} x_{j t+\delta}$ mit $\delta_*(t) = \text{min}(\delta_\text{max}, \tau -1 -t)$
+    \item $f_\text{nonredundant}^I (\{ x_i \}) = A_{\text{nonredundant}}\sum_{ij} I_{ij} \sum_{\delta = 2}^{\tau - 2} \sum_{t=0}^{\tau - 2 - \delta} x_{it} x_{j t+1} x_{i t+\delta} x_{j t+ 1 +\delta}$
+    \begin{itemize}
+      \item Vorsicht: Grad des Polynoms muss noch auf zwei reduziert werden
+    \end{itemize}
+    \vspace*{0.5cm}
+    \begin{equation*}
+      A_\text{local} = 5000, \quad A_\text{demand} = 320, \quad A_\text{time} = 0.01\quad A_\text{nonredundant} = 1  
+    \end{equation*}
+  \end{itemize}
+
+  \begin{textblock*}{6cm}(0.5cm, 9cm)
+    {\footnotesize \href{https://www.nature.com/articles/s41598-023-31765-8}{Weinberg, S.J., Sanches, F., Ide, T. et al. Sci Rep 13, 4770 (2023)}}
+  \end{textblock*}
+
 \end{frame}
 
-\begin{frame}{Fallbeispiel aus Weinberg et al.}
-  Hier nicht zu sehr ins Detail gehen aber zumindest die Idee und Herangehensweise zeigen
+\begin{frame}{Fallbeispiel Aisin Corporation}
+  \begin{textblock*}{5cm}(0.5cm, 3cm) % {block width} (coords)
+    \includegraphics[width = 7cm]{Plots/74.png}
+  \end{textblock*}
+  \begin{textblock*}{5cm}(8.2cm, 3cm) % {block width} (coords)
+    \includegraphics[width = 7cm]{Plots/61.png}
+  \end{textblock*}
+  \begin{textblock*}{6cm}(0.5cm, 9cm)
+    {\footnotesize \href{https://www.nature.com/articles/s41598-023-31765-8}{Weinberg, S.J., Sanches, F., Ide, T. et al. Sci Rep 13, 4770 (2023)}}
+  \end{textblock*}
+\end{frame}
+
+\begin{frame}{Fallbeispiel Aisin Corporation}
+  \begin{textblock*}{5cm}(1cm, 2.5cm) % {block width} (coords)
+    \includegraphics[width = 6cm]{Plots/before.png}
+  \end{textblock*}
+  \begin{textblock*}{5cm}(9cm, 2.5cm) % {block width} (coords)
+    \includegraphics[width = 6cm]{Plots/after.png}
+  \end{textblock*}
+  \begin{textblock*}{6cm}(0.5cm, 9cm)
+    {\footnotesize \href{https://www.nature.com/articles/s41598-023-31765-8}{Weinberg, S.J., Sanches, F., Ide, T. et al. Sci Rep 13, 4770 (2023)}}
+  \end{textblock*}
 \end{frame}
 
 \section{Zusammenfassung und Ausblick}
@@ -514,4 +678,5 @@ per-mode=symbol-or-fraction, % m/s im Text, sonst \frac
 \begin{frame}{Backup-Folien für Detailfragen}
   Details, evtl. Rechnungen und Zahlenwerte für Fragen
 \end{frame}
+
 \end{document}
