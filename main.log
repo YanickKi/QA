@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.15.0 (TeX Live 2022)  (format=lualatex 2023.2.25)  5 JUL 2023 22:41
+This is LuaHBTeX, Version 1.15.0 (TeX Live 2022)  (format=lualatex 2023.2.25)  10 JUL 2023 00:47
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -980,12 +980,12 @@ braces):
 >  {german/Localnumeral}  =>  {polyglossia@C@localnumeral}
 >  {german/DefineCommandsCmd}  =>  {xpg_define_language_commands:e}.
 Module polyglossia Info: Language data for german
-(polyglossia)            hyphenation	
 (polyglossia)            patterns	hyph-de-1901.pat.txt
-(polyglossia)            loader	loadhyph-de-1901.tex
-(polyglossia)            synonyms	
+(polyglossia)            lefthyphenmin	2
 (polyglossia)            righthyphenmin	2
-(polyglossia)            lefthyphenmin	2 on input line 12
+(polyglossia)            hyphenation	
+(polyglossia)            loader	loadhyph-de-1901.tex
+(polyglossia)            synonyms	 on input line 12
 Module polyglossia Info: Language german was not yet loaded; created with id 2 o
 n input line 12
 Package polyglossia Info: Option: German, spelling=new.
@@ -1956,12 +1956,12 @@ LaTeX Info: Redefining \rmfamily on input line 20.
 LaTeX Info: Redefining \sffamily on input line 20.
 LaTeX Info: Redefining \ttfamily on input line 20.
 Module polyglossia Info: Language data for ngerman
-(polyglossia)            hyphenation	
 (polyglossia)            patterns	hyph-de-1996.pat.txt
-(polyglossia)            loader	loadhyph-de-1996.tex
-(polyglossia)            synonyms	
+(polyglossia)            lefthyphenmin	2
 (polyglossia)            righthyphenmin	2
-(polyglossia)            lefthyphenmin	2 on input line 20
+(polyglossia)            hyphenation	
+(polyglossia)            loader	loadhyph-de-1996.tex
+(polyglossia)            synonyms	 on input line 20
 Module polyglossia Info: Language ngerman was not yet loaded; created with id 3 
 on input line 20
 )
@@ -2266,405 +2266,1572 @@ Package luatex.def Info: logos/tu.pdf  used on input line 128.
 [2
 
 <./Plots/annealing_front.png>]
-File: logos/tu.pdf Graphic file (type pdf)
-<use logos/tu.pdf>
-Package luatex.def Info: logos/tu.pdf  used on input line 146.
-(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
-LaTeX Font Info:    Font shape `TU/FiraSansLight(0)/m/n' will be
-(Font)              scaled to size 6.79163pt on input line 146.
- [3
-
-]
-<Plots/Ising_Modell_2d.png, id=55, 641.39626pt x 457.71pt>
-File: Plots/Ising_Modell_2d.png Graphic file (type png)
-<use Plots/Ising_Modell_2d.png>
-Package luatex.def Info: Plots/Ising_Modell_2d.png  used on input line 169.
-(luatex.def)             Requested size: 121.19539pt x 86.4839pt.
-LaTeX Font Info:    Font shape `TU/FiraSansLight(0)/m/it' will be
-(Font)              scaled to size 5.94267pt on input line 169.
-
-Overfull \hbox (74.41869pt too wide) in paragraph at lines 169--169
- | [] 
- []
-
-<Plots/vehicle_routing_problem.jpg, id=57, 270.00874pt x 187.70125pt>
-File: Plots/vehicle_routing_problem.jpg Graphic file (type jpg)
-<use Plots/vehicle_routing_problem.jpg>
-Package luatex.def Info: Plots/vehicle_routing_problem.jpg  used on input line 
-169.
-(luatex.def)             Requested size: 121.19539pt x 84.24997pt.
-File: logos/tu.pdf Graphic file (type pdf)
-<use logos/tu.pdf>
-Package luatex.def Info: logos/tu.pdf  used on input line 169.
-(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
-[4
-
-<./Plots/Ising_Modell_2d.png><./Plots/vehicle_routing_problem.jpg>]
-<Plots/LA.jpg, id=68, 867.24pt x 650.43pt>
+<Plots/LA.jpg, id=47, 867.24pt x 650.43pt>
 File: Plots/LA.jpg Graphic file (type jpg)
 <use Plots/LA.jpg>
-Package luatex.def Info: Plots/LA.jpg  used on input line 174.
+Package luatex.def Info: Plots/LA.jpg  used on input line 136.
 (luatex.def)             Requested size: 255.14903pt x 191.3591pt.
+LaTeX Font Info:    Font shape `TU/FiraSansLight(0)/m/it' will be
+(Font)              scaled to size 5.94267pt on input line 136.
 File: logos/tu.pdf Graphic file (type pdf)
 <use logos/tu.pdf>
-Package luatex.def Info: logos/tu.pdf  used on input line 174.
+Package luatex.def Info: logos/tu.pdf  used on input line 136.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+LaTeX Font Info:    Font shape `TU/FiraSansLight(0)/m/n' will be
+(Font)              scaled to size 6.79163pt on input line 136.
+ [3
+
+<./Plots/LA.jpg>]
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 158.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+ [4
+
+]
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 158.
 (luatex.def)             Requested size: 140.30132pt x 22.76271pt.
  [5
 
-<./Plots/LA.jpg>]
-LaTeX Font Info:    Font shape `TU/FiraSansLight(0)/b/n' will be
-(Font)              scaled to size 6.71448pt on input line 201.
-LaTeX Font Info:    Font shape `TU/FiraSansLight(0)/m/n' will be
-(Font)              scaled to size 5.5012pt on input line 201.
-LaTeX Font Info:    Font shape `TU/FiraSansLight(0)/m/n' will be
-(Font)              scaled to size 4.43153pt on input line 201.
-<Plots/slow_fast_SA.png, id=76, 1204.5pt x 903.375pt>
-File: Plots/slow_fast_SA.png Graphic file (type png)
-<use Plots/slow_fast_SA.png>
-Package luatex.def Info: Plots/slow_fast_SA.png  used on input line 201.
-(luatex.def)             Requested size: 184.9429pt x 138.69838pt.
+]
 File: logos/tu.pdf Graphic file (type pdf)
 <use logos/tu.pdf>
-Package luatex.def Info: logos/tu.pdf  used on input line 201.
+Package luatex.def Info: logos/tu.pdf  used on input line 158.
 (luatex.def)             Requested size: 140.30132pt x 22.76271pt.
  [6
 
-<./Plots/slow_fast_SA.png>]
+]
 File: logos/tu.pdf Graphic file (type pdf)
 <use logos/tu.pdf>
-Package luatex.def Info: logos/tu.pdf  used on input line 205.
+Package luatex.def Info: logos/tu.pdf  used on input line 158.
 (luatex.def)             Requested size: 140.30132pt x 22.76271pt.
  [7
 
 ]
-<Plots/tunneling.jpg, id=93, 186.02298pt x 141.07104pt>
-File: Plots/tunneling.jpg Graphic file (type jpg)
-<use Plots/tunneling.jpg>
-Package luatex.def Info: Plots/tunneling.jpg  used on input line 228.
-(luatex.def)             Requested size: 142.26378pt x 107.88885pt.
 File: logos/tu.pdf Graphic file (type pdf)
 <use logos/tu.pdf>
-Package luatex.def Info: logos/tu.pdf  used on input line 228.
+Package luatex.def Info: logos/tu.pdf  used on input line 158.
 (luatex.def)             Requested size: 140.30132pt x 22.76271pt.
  [8
 
+]
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 158.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+
+[9
+
+]
+<Plots/Ising_Modell_2d.png, id=99, 641.39626pt x 457.71pt>
+File: Plots/Ising_Modell_2d.png Graphic file (type png)
+<use Plots/Ising_Modell_2d.png>
+Package luatex.def Info: Plots/Ising_Modell_2d.png  used on input line 181.
+(luatex.def)             Requested size: 121.19539pt x 86.4839pt.
+
+Overfull \hbox (74.41869pt too wide) in paragraph at lines 181--181
+ | [] 
+ []
+
+<Plots/vehicle_routing_problem.jpg, id=101, 270.00874pt x 187.70125pt>
+File: Plots/vehicle_routing_problem.jpg Graphic file (type jpg)
+<use Plots/vehicle_routing_problem.jpg>
+Package luatex.def Info: Plots/vehicle_routing_problem.jpg  used on input line 
+181.
+(luatex.def)             Requested size: 121.19539pt x 84.24997pt.
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 181.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+[10
+
+<./Plots/Ising_Modell_2d.png><./Plots/vehicle_routing_problem.jpg>]
+LaTeX Font Info:    Font shape `TU/FiraSansLight(0)/b/n' will be
+(Font)              scaled to size 6.71448pt on input line 219.
+LaTeX Font Info:    Font shape `TU/FiraSansLight(0)/m/n' will be
+(Font)              scaled to size 5.5012pt on input line 219.
+LaTeX Font Info:    Font shape `TU/FiraSansLight(0)/m/n' will be
+(Font)              scaled to size 4.43153pt on input line 219.
+<Plots/thermal_annealing.jpg, id=112, 186.02298pt x 141.07104pt>
+File: Plots/thermal_annealing.jpg Graphic file (type jpg)
+<use Plots/thermal_annealing.jpg>
+Package luatex.def Info: Plots/thermal_annealing.jpg  used on input line 219.
+(luatex.def)             Requested size: 142.26378pt x 107.88885pt.
+<Plots/slow_fast_SA.png, id=114, 749.04843pt x 374.14781pt>
+File: Plots/slow_fast_SA.png Graphic file (type png)
+<use Plots/slow_fast_SA.png>
+Package luatex.def Info: Plots/slow_fast_SA.png  used on input line 219.
+(luatex.def)             Requested size: 142.26378pt x 71.06027pt.
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 219.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+ [11
+
+<./Plots/thermal_annealing.jpg><./Plots/slow_fast_SA.png>]
+File: Plots/thermal_annealing.jpg Graphic file (type jpg)
+<use Plots/thermal_annealing.jpg>
+Package luatex.def Info: Plots/thermal_annealing.jpg  used on input line 219.
+(luatex.def)             Requested size: 142.26378pt x 107.88885pt.
+File: Plots/slow_fast_SA.png Graphic file (type png)
+<use Plots/slow_fast_SA.png>
+Package luatex.def Info: Plots/slow_fast_SA.png  used on input line 219.
+(luatex.def)             Requested size: 142.26378pt x 71.06027pt.
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 219.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+ [12
+
+]
+File: Plots/thermal_annealing.jpg Graphic file (type jpg)
+<use Plots/thermal_annealing.jpg>
+Package luatex.def Info: Plots/thermal_annealing.jpg  used on input line 219.
+(luatex.def)             Requested size: 142.26378pt x 107.88885pt.
+File: Plots/slow_fast_SA.png Graphic file (type png)
+<use Plots/slow_fast_SA.png>
+Package luatex.def Info: Plots/slow_fast_SA.png  used on input line 219.
+(luatex.def)             Requested size: 142.26378pt x 71.06027pt.
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 219.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+ [13
+
+]
+File: Plots/thermal_annealing.jpg Graphic file (type jpg)
+<use Plots/thermal_annealing.jpg>
+Package luatex.def Info: Plots/thermal_annealing.jpg  used on input line 219.
+(luatex.def)             Requested size: 142.26378pt x 107.88885pt.
+File: Plots/slow_fast_SA.png Graphic file (type png)
+<use Plots/slow_fast_SA.png>
+Package luatex.def Info: Plots/slow_fast_SA.png  used on input line 219.
+(luatex.def)             Requested size: 142.26378pt x 71.06027pt.
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 219.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+ [14
+
+]
+File: Plots/thermal_annealing.jpg Graphic file (type jpg)
+<use Plots/thermal_annealing.jpg>
+Package luatex.def Info: Plots/thermal_annealing.jpg  used on input line 219.
+(luatex.def)             Requested size: 142.26378pt x 107.88885pt.
+File: Plots/slow_fast_SA.png Graphic file (type png)
+<use Plots/slow_fast_SA.png>
+Package luatex.def Info: Plots/slow_fast_SA.png  used on input line 219.
+(luatex.def)             Requested size: 142.26378pt x 71.06027pt.
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 219.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+ [15
+
+]
+File: Plots/thermal_annealing.jpg Graphic file (type jpg)
+<use Plots/thermal_annealing.jpg>
+Package luatex.def Info: Plots/thermal_annealing.jpg  used on input line 219.
+(luatex.def)             Requested size: 142.26378pt x 107.88885pt.
+File: Plots/slow_fast_SA.png Graphic file (type png)
+<use Plots/slow_fast_SA.png>
+Package luatex.def Info: Plots/slow_fast_SA.png  used on input line 219.
+(luatex.def)             Requested size: 142.26378pt x 71.06027pt.
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 219.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+
+[16
+
+]
+File: Plots/thermal_annealing.jpg Graphic file (type jpg)
+<use Plots/thermal_annealing.jpg>
+Package luatex.def Info: Plots/thermal_annealing.jpg  used on input line 219.
+(luatex.def)             Requested size: 142.26378pt x 107.88885pt.
+File: Plots/slow_fast_SA.png Graphic file (type png)
+<use Plots/slow_fast_SA.png>
+Package luatex.def Info: Plots/slow_fast_SA.png  used on input line 219.
+(luatex.def)             Requested size: 142.26378pt x 71.06027pt.
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 219.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+ [17
+
+]
+<Plots/tunneling.jpg, id=181, 186.02298pt x 141.07104pt>
+File: Plots/tunneling.jpg Graphic file (type jpg)
+<use Plots/tunneling.jpg>
+Package luatex.def Info: Plots/tunneling.jpg  used on input line 247.
+(luatex.def)             Requested size: 142.26378pt x 107.88885pt.
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 247.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+ [18
+
 <./Plots/tunneling.jpg>]
-<Plots/gap.png, id=102, 687.56876pt x 372.39125pt>
+File: Plots/tunneling.jpg Graphic file (type jpg)
+<use Plots/tunneling.jpg>
+Package luatex.def Info: Plots/tunneling.jpg  used on input line 247.
+(luatex.def)             Requested size: 142.26378pt x 107.88885pt.
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 247.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+ [19
+
+]
+File: Plots/tunneling.jpg Graphic file (type jpg)
+<use Plots/tunneling.jpg>
+Package luatex.def Info: Plots/tunneling.jpg  used on input line 247.
+(luatex.def)             Requested size: 142.26378pt x 107.88885pt.
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 247.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+ [20
+
+]
+File: Plots/tunneling.jpg Graphic file (type jpg)
+<use Plots/tunneling.jpg>
+Package luatex.def Info: Plots/tunneling.jpg  used on input line 247.
+(luatex.def)             Requested size: 142.26378pt x 107.88885pt.
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 247.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+ [21
+
+]
+File: Plots/tunneling.jpg Graphic file (type jpg)
+<use Plots/tunneling.jpg>
+Package luatex.def Info: Plots/tunneling.jpg  used on input line 247.
+(luatex.def)             Requested size: 142.26378pt x 107.88885pt.
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 247.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+ [22
+
+]
+File: Plots/tunneling.jpg Graphic file (type jpg)
+<use Plots/tunneling.jpg>
+Package luatex.def Info: Plots/tunneling.jpg  used on input line 247.
+(luatex.def)             Requested size: 142.26378pt x 107.88885pt.
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 247.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+ [23
+
+]
+File: Plots/tunneling.jpg Graphic file (type jpg)
+<use Plots/tunneling.jpg>
+Package luatex.def Info: Plots/tunneling.jpg  used on input line 247.
+(luatex.def)             Requested size: 142.26378pt x 107.88885pt.
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 247.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+ [24
+
+]
+File: Plots/tunneling.jpg Graphic file (type jpg)
+<use Plots/tunneling.jpg>
+Package luatex.def Info: Plots/tunneling.jpg  used on input line 247.
+(luatex.def)             Requested size: 142.26378pt x 107.88885pt.
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 247.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+ [25
+
+]
+<Plots/gap.png, id=247, 687.56876pt x 372.39125pt>
 File: Plots/gap.png Graphic file (type png)
 <use Plots/gap.png>
-Package luatex.def Info: Plots/gap.png  used on input line 245.
+Package luatex.def Info: Plots/gap.png  used on input line 266.
 (luatex.def)             Requested size: 184.9429pt x 100.16626pt.
 
-Overfull \hbox (42.67912pt too wide) in paragraph at lines 245--245
+Overfull \hbox (42.67912pt too wide) in paragraph at lines 266--266
 [] 
  []
 
 
-Overfull \hbox (5.90668pt too wide) in paragraph at lines 245--245
+Overfull \hbox (5.90668pt too wide) in paragraph at lines 266--266
 | []  
  []
 
 File: logos/tu.pdf Graphic file (type pdf)
 <use logos/tu.pdf>
-Package luatex.def Info: logos/tu.pdf  used on input line 245.
+Package luatex.def Info: logos/tu.pdf  used on input line 266.
 (luatex.def)             Requested size: 140.30132pt x 22.76271pt.
-[9
+[26
 
 <./Plots/gap.png>]
-<Plots/SimAnnealingLandschaft.png, id=111, 740.7675pt x 367.3725pt>
+File: Plots/gap.png Graphic file (type png)
+<use Plots/gap.png>
+Package luatex.def Info: Plots/gap.png  used on input line 266.
+(luatex.def)             Requested size: 184.9429pt x 100.16626pt.
+
+Overfull \hbox (42.67912pt too wide) in paragraph at lines 266--266
+[] 
+ []
+
+
+Overfull \hbox (5.90668pt too wide) in paragraph at lines 266--266
+| []  
+ []
+
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 266.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+[27
+
+]
+File: Plots/gap.png Graphic file (type png)
+<use Plots/gap.png>
+Package luatex.def Info: Plots/gap.png  used on input line 266.
+(luatex.def)             Requested size: 184.9429pt x 100.16626pt.
+
+Overfull \hbox (42.67912pt too wide) in paragraph at lines 266--266
+[] 
+ []
+
+
+Overfull \hbox (5.90668pt too wide) in paragraph at lines 266--266
+| []  
+ []
+
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 266.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+[28
+
+]
+File: Plots/gap.png Graphic file (type png)
+<use Plots/gap.png>
+Package luatex.def Info: Plots/gap.png  used on input line 266.
+(luatex.def)             Requested size: 184.9429pt x 100.16626pt.
+
+Overfull \hbox (42.67912pt too wide) in paragraph at lines 266--266
+[] 
+ []
+
+
+Overfull \hbox (5.90668pt too wide) in paragraph at lines 266--266
+| []  
+ []
+
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 266.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+[29
+
+]
+File: Plots/gap.png Graphic file (type png)
+<use Plots/gap.png>
+Package luatex.def Info: Plots/gap.png  used on input line 266.
+(luatex.def)             Requested size: 184.9429pt x 100.16626pt.
+
+Overfull \hbox (42.67912pt too wide) in paragraph at lines 266--266
+[] 
+ []
+
+
+Overfull \hbox (5.90668pt too wide) in paragraph at lines 266--266
+| []  
+ []
+
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 266.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+[30
+
+]
+File: Plots/gap.png Graphic file (type png)
+<use Plots/gap.png>
+Package luatex.def Info: Plots/gap.png  used on input line 266.
+(luatex.def)             Requested size: 184.9429pt x 100.16626pt.
+
+Overfull \hbox (42.67912pt too wide) in paragraph at lines 266--266
+[] 
+ []
+
+
+Overfull \hbox (5.90668pt too wide) in paragraph at lines 266--266
+| []  
+ []
+
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 266.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+[31
+
+]
+<Plots/SimAnnealingLandschaft.png, id=298, 740.7675pt x 367.3725pt>
 File: Plots/SimAnnealingLandschaft.png Graphic file (type png)
 <use Plots/SimAnnealingLandschaft.png>
-Package luatex.def Info: Plots/SimAnnealingLandschaft.png  used on input line 2
-73.
+Package luatex.def Info: Plots/SimAnnealingLandschaft.png  used on input line 3
+01.
 (luatex.def)             Requested size: 147.95424pt x 73.37228pt.
 
-Overfull \hbox (5.69046pt too wide) in paragraph at lines 273--273
+Overfull \hbox (5.69046pt too wide) in paragraph at lines 301--301
 [] 
  []
 
 File: logos/tu.pdf Graphic file (type pdf)
 <use logos/tu.pdf>
-Package luatex.def Info: logos/tu.pdf  used on input line 273.
+Package luatex.def Info: logos/tu.pdf  used on input line 301.
 (luatex.def)             Requested size: 140.30132pt x 22.76271pt.
-[10
+[32
 
 <./Plots/SimAnnealingLandschaft.png>]
-<Plots/ln.png, id=122, 654.445pt x 442.65375pt>
-File: Plots/ln.png Graphic file (type png)
-<use Plots/ln.png>
-Package luatex.def Info: Plots/ln.png  used on input line 300.
-(luatex.def)             Requested size: 213.39566pt x 144.33356pt.
-File: logos/tu.pdf Graphic file (type pdf)
-<use logos/tu.pdf>
-Package luatex.def Info: logos/tu.pdf  used on input line 300.
-(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
- [11
+File: Plots/SimAnnealingLandschaft.png Graphic file (type png)
+<use Plots/SimAnnealingLandschaft.png>
+Package luatex.def Info: Plots/SimAnnealingLandschaft.png  used on input line 3
+01.
+(luatex.def)             Requested size: 147.95424pt x 73.37228pt.
 
-<./Plots/ln.png>]
-<Plots/sqrt.png, id=133, 649.42625pt x 442.65375pt>
-File: Plots/sqrt.png Graphic file (type png)
-<use Plots/sqrt.png>
-Package luatex.def Info: Plots/sqrt.png  used on input line 327.
-(luatex.def)             Requested size: 213.39566pt x 145.44803pt.
-File: logos/tu.pdf Graphic file (type pdf)
-<use logos/tu.pdf>
-Package luatex.def Info: logos/tu.pdf  used on input line 327.
-(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
- [12
+Overfull \hbox (5.69046pt too wide) in paragraph at lines 301--301
+[] 
+ []
 
-<./Plots/sqrt.png>]
-<Plots/t.png, id=143, 650.43pt x 449.68pt>
-File: Plots/t.png Graphic file (type png)
-<use Plots/t.png>
-Package luatex.def Info: Plots/t.png  used on input line 354.
-(luatex.def)             Requested size: 213.39566pt x 147.53029pt.
 File: logos/tu.pdf Graphic file (type pdf)
 <use logos/tu.pdf>
-Package luatex.def Info: logos/tu.pdf  used on input line 354.
+Package luatex.def Info: logos/tu.pdf  used on input line 301.
 (luatex.def)             Requested size: 140.30132pt x 22.76271pt.
- [13
-
-<./Plots/t.png>]
-File: logos/tu.pdf Graphic file (type pdf)
-<use logos/tu.pdf>
-Package luatex.def Info: logos/tu.pdf  used on input line 369.
-(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
- [14
+[33
 
 ]
-<Plots/binary_1.pdf, id=161, 364.75989pt x 239.4296pt>
+File: Plots/SimAnnealingLandschaft.png Graphic file (type png)
+<use Plots/SimAnnealingLandschaft.png>
+Package luatex.def Info: Plots/SimAnnealingLandschaft.png  used on input line 3
+01.
+(luatex.def)             Requested size: 147.95424pt x 73.37228pt.
+
+Overfull \hbox (5.69046pt too wide) in paragraph at lines 301--301
+[] 
+ []
+
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 301.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+[34
+
+]
+File: Plots/SimAnnealingLandschaft.png Graphic file (type png)
+<use Plots/SimAnnealingLandschaft.png>
+Package luatex.def Info: Plots/SimAnnealingLandschaft.png  used on input line 3
+01.
+(luatex.def)             Requested size: 147.95424pt x 73.37228pt.
+
+Overfull \hbox (5.69046pt too wide) in paragraph at lines 301--301
+[] 
+ []
+
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 301.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+[35
+
+]
+File: Plots/SimAnnealingLandschaft.png Graphic file (type png)
+<use Plots/SimAnnealingLandschaft.png>
+Package luatex.def Info: Plots/SimAnnealingLandschaft.png  used on input line 3
+01.
+(luatex.def)             Requested size: 147.95424pt x 73.37228pt.
+
+Overfull \hbox (5.69046pt too wide) in paragraph at lines 301--301
+[] 
+ []
+
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 301.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+[36
+
+]
+File: Plots/SimAnnealingLandschaft.png Graphic file (type png)
+<use Plots/SimAnnealingLandschaft.png>
+Package luatex.def Info: Plots/SimAnnealingLandschaft.png  used on input line 3
+01.
+(luatex.def)             Requested size: 147.95424pt x 73.37228pt.
+
+Overfull \hbox (5.69046pt too wide) in paragraph at lines 301--301
+[] 
+ []
+
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 301.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+[37
+
+]
+File: Plots/SimAnnealingLandschaft.png Graphic file (type png)
+<use Plots/SimAnnealingLandschaft.png>
+Package luatex.def Info: Plots/SimAnnealingLandschaft.png  used on input line 3
+01.
+(luatex.def)             Requested size: 147.95424pt x 73.37228pt.
+
+Overfull \hbox (5.69046pt too wide) in paragraph at lines 301--301
+[] 
+ []
+
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 301.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+[38
+
+]
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 332--332
+[]  
+ []
+
+<Plots/ln.png, id=363, 654.445pt x 442.65375pt>
+File: Plots/ln.png Graphic file (type png)
+<use Plots/ln.png>
+Package luatex.def Info: Plots/ln.png  used on input line 332.
+(luatex.def)             Requested size: 213.39566pt x 144.33356pt.
+<Plots/ln.pdf, id=365, 376.42633pt x 285.07704pt>
+File: Plots/ln.pdf Graphic file (type pdf)
+<use Plots/ln.pdf>
+Package luatex.def Info: Plots/ln.pdf  used on input line 332.
+(luatex.def)             Requested size: 128.0374pt x 96.96405pt.
+
+Overfull \hbox (28.45276pt too wide) in paragraph at lines 332--332
+ [] 
+ []
+
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 332.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+[39
+
+<./Plots/ln.png><./Plots/ln.pdf>]
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 363--363
+[]  
+ []
+
+<Plots/sqrt.png, id=379, 649.42625pt x 442.65375pt>
+File: Plots/sqrt.png Graphic file (type png)
+<use Plots/sqrt.png>
+Package luatex.def Info: Plots/sqrt.png  used on input line 363.
+(luatex.def)             Requested size: 213.39566pt x 145.44803pt.
+<Plots/sqrt.pdf, id=381, 376.42633pt x 285.07704pt>
+File: Plots/sqrt.pdf Graphic file (type pdf)
+<use Plots/sqrt.pdf>
+Package luatex.def Info: Plots/sqrt.pdf  used on input line 363.
+(luatex.def)             Requested size: 128.0374pt x 96.96405pt.
+
+Overfull \hbox (28.45276pt too wide) in paragraph at lines 363--363
+ [] 
+ []
+
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 363.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+[40
+
+<./Plots/sqrt.png><./Plots/sqrt.pdf>]
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 394--394
+[]  
+ []
+
+<Plots/t.png, id=396, 650.43pt x 449.68pt>
+File: Plots/t.png Graphic file (type png)
+<use Plots/t.png>
+Package luatex.def Info: Plots/t.png  used on input line 394.
+(luatex.def)             Requested size: 213.39566pt x 147.53029pt.
+<Plots/t.pdf, id=398, 376.42633pt x 285.07704pt>
+File: Plots/t.pdf Graphic file (type pdf)
+<use Plots/t.pdf>
+Package luatex.def Info: Plots/t.pdf  used on input line 394.
+(luatex.def)             Requested size: 128.0374pt x 96.96405pt.
+
+Overfull \hbox (28.45276pt too wide) in paragraph at lines 394--394
+ [] 
+ []
+
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 394.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+[41
+
+<./Plots/t.png><./Plots/t.pdf>]
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 411.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+ [42
+
+]
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 411.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+ [43
+
+]
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 411.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+ [44
+
+]
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 411.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+ [45
+
+]
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 411.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+ [46
+
+]
+<Plots/binary_1.pdf, id=448, 364.75989pt x 239.4296pt>
 File: Plots/binary_1.pdf Graphic file (type pdf)
 <use Plots/binary_1.pdf>
-Package luatex.def Info: Plots/binary_1.pdf  used on input line 383.
+Package luatex.def Info: Plots/binary_1.pdf  used on input line 425.
 (luatex.def)             Requested size: 297.66956pt x 195.3946pt.
 File: logos/tu.pdf Graphic file (type pdf)
 <use logos/tu.pdf>
-Package luatex.def Info: logos/tu.pdf  used on input line 383.
+Package luatex.def Info: logos/tu.pdf  used on input line 425.
 (luatex.def)             Requested size: 140.30132pt x 22.76271pt.
- [15
+ [47
 
 <./Plots/binary_1.pdf>]
-<Plots/binary_2.pdf, id=175, 364.75989pt x 239.4296pt>
+<Plots/binary_2.pdf, id=462, 364.75989pt x 239.4296pt>
 File: Plots/binary_2.pdf Graphic file (type pdf)
 <use Plots/binary_2.pdf>
-Package luatex.def Info: Plots/binary_2.pdf  used on input line 397.
+Package luatex.def Info: Plots/binary_2.pdf  used on input line 439.
 (luatex.def)             Requested size: 297.66956pt x 195.3946pt.
 File: logos/tu.pdf Graphic file (type pdf)
 <use logos/tu.pdf>
-Package luatex.def Info: logos/tu.pdf  used on input line 397.
+Package luatex.def Info: logos/tu.pdf  used on input line 439.
 (luatex.def)             Requested size: 140.30132pt x 22.76271pt.
- [16
+ [48
 
 <./Plots/binary_2.pdf>]
-<Plots/binary_3.pdf, id=189, 364.75989pt x 225.8602pt>
+<Plots/binary_3.pdf, id=476, 364.75989pt x 225.8602pt>
 File: Plots/binary_3.pdf Graphic file (type pdf)
 <use Plots/binary_3.pdf>
-Package luatex.def Info: Plots/binary_3.pdf  used on input line 417.
+Package luatex.def Info: Plots/binary_3.pdf  used on input line 459.
 (luatex.def)             Requested size: 297.66956pt x 184.32083pt.
 File: logos/tu.pdf Graphic file (type pdf)
 <use logos/tu.pdf>
-Package luatex.def Info: logos/tu.pdf  used on input line 417.
+Package luatex.def Info: logos/tu.pdf  used on input line 459.
 (luatex.def)             Requested size: 140.30132pt x 22.76271pt.
- [17
+ [49
 
 <./Plots/binary_3.pdf>]
-<Plots/binary_4.pdf, id=203, 364.75989pt x 225.8602pt>
+<Plots/binary_4.pdf, id=490, 364.75989pt x 225.8602pt>
 File: Plots/binary_4.pdf Graphic file (type pdf)
 <use Plots/binary_4.pdf>
-Package luatex.def Info: Plots/binary_4.pdf  used on input line 437.
+Package luatex.def Info: Plots/binary_4.pdf  used on input line 479.
 (luatex.def)             Requested size: 297.66956pt x 184.32083pt.
 File: logos/tu.pdf Graphic file (type pdf)
 <use logos/tu.pdf>
-Package luatex.def Info: logos/tu.pdf  used on input line 437.
+Package luatex.def Info: logos/tu.pdf  used on input line 479.
 (luatex.def)             Requested size: 140.30132pt x 22.76271pt.
- [18
+ [50
 
 <./Plots/binary_4.pdf>]
 File: logos/tu.pdf Graphic file (type pdf)
 <use logos/tu.pdf>
-Package luatex.def Info: logos/tu.pdf  used on input line 454.
+Package luatex.def Info: logos/tu.pdf  used on input line 497.
 (luatex.def)             Requested size: 140.30132pt x 22.76271pt.
- [19
+ [51
 
 ]
 File: logos/tu.pdf Graphic file (type pdf)
 <use logos/tu.pdf>
-Package luatex.def Info: logos/tu.pdf  used on input line 471.
+Package luatex.def Info: logos/tu.pdf  used on input line 497.
 (luatex.def)             Requested size: 140.30132pt x 22.76271pt.
- [20
+ [52
 
 ]
-<Plots/advantage.png, id=231, 1606.0pt x 1069.9975pt>
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 497.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+ [53
+
+]
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 497.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+ [54
+
+]
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 497.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+ [55
+
+]
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 497.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+ [56
+
+]
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 514.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+ [57
+
+]
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 514.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+ [58
+
+]
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 514.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+ [59
+
+]
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 514.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+ [60
+
+]
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 514.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+ [61
+
+]
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 514.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+ [62
+
+]
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 514.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+ [63
+
+]
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 514.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+
+[64
+
+]
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 514.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+ [65
+
+]
+<Plots/advantage.png, id=612, 1606.0pt x 1069.9975pt>
 File: Plots/advantage.png Graphic file (type png)
 <use Plots/advantage.png>
-Package luatex.def Info: Plots/advantage.png  used on input line 505.
+Package luatex.def Info: Plots/advantage.png  used on input line 548.
 (luatex.def)             Requested size: 128.0374pt x 85.29134pt.
-<Plots/QPU.jpg, id=233, 853.1875pt x 853.1875pt>
+<Plots/QPU.jpg, id=614, 853.1875pt x 853.1875pt>
 File: Plots/QPU.jpg Graphic file (type jpg)
 <use Plots/QPU.jpg>
-Package luatex.def Info: Plots/QPU.jpg  used on input line 505.
+Package luatex.def Info: Plots/QPU.jpg  used on input line 548.
 (luatex.def)             Requested size: 85.35826pt x 85.34978pt.
 File: logos/tu.pdf Graphic file (type pdf)
 <use logos/tu.pdf>
-Package luatex.def Info: logos/tu.pdf  used on input line 505.
+Package luatex.def Info: logos/tu.pdf  used on input line 548.
 (luatex.def)             Requested size: 140.30132pt x 22.76271pt.
- [21
+ [66
 
 <./Plots/advantage.png><./Plots/QPU.jpg>]
-<Plots/4x4_graph.png, id=243, 300.12125pt x 295.1025pt>
+File: Plots/advantage.png Graphic file (type png)
+<use Plots/advantage.png>
+Package luatex.def Info: Plots/advantage.png  used on input line 548.
+(luatex.def)             Requested size: 128.0374pt x 85.29134pt.
+File: Plots/QPU.jpg Graphic file (type jpg)
+<use Plots/QPU.jpg>
+Package luatex.def Info: Plots/QPU.jpg  used on input line 548.
+(luatex.def)             Requested size: 85.35826pt x 85.34978pt.
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 548.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+ [67
+
+]
+File: Plots/advantage.png Graphic file (type png)
+<use Plots/advantage.png>
+Package luatex.def Info: Plots/advantage.png  used on input line 548.
+(luatex.def)             Requested size: 128.0374pt x 85.29134pt.
+File: Plots/QPU.jpg Graphic file (type jpg)
+<use Plots/QPU.jpg>
+Package luatex.def Info: Plots/QPU.jpg  used on input line 548.
+(luatex.def)             Requested size: 85.35826pt x 85.34978pt.
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 548.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+ [68
+
+]
+File: Plots/advantage.png Graphic file (type png)
+<use Plots/advantage.png>
+Package luatex.def Info: Plots/advantage.png  used on input line 548.
+(luatex.def)             Requested size: 128.0374pt x 85.29134pt.
+File: Plots/QPU.jpg Graphic file (type jpg)
+<use Plots/QPU.jpg>
+Package luatex.def Info: Plots/QPU.jpg  used on input line 548.
+(luatex.def)             Requested size: 85.35826pt x 85.34978pt.
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 548.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+ [69
+
+]
+File: Plots/advantage.png Graphic file (type png)
+<use Plots/advantage.png>
+Package luatex.def Info: Plots/advantage.png  used on input line 548.
+(luatex.def)             Requested size: 128.0374pt x 85.29134pt.
+File: Plots/QPU.jpg Graphic file (type jpg)
+<use Plots/QPU.jpg>
+Package luatex.def Info: Plots/QPU.jpg  used on input line 548.
+(luatex.def)             Requested size: 85.35826pt x 85.34978pt.
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 548.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+ [70
+
+]
+File: Plots/advantage.png Graphic file (type png)
+<use Plots/advantage.png>
+Package luatex.def Info: Plots/advantage.png  used on input line 548.
+(luatex.def)             Requested size: 128.0374pt x 85.29134pt.
+File: Plots/QPU.jpg Graphic file (type jpg)
+<use Plots/QPU.jpg>
+Package luatex.def Info: Plots/QPU.jpg  used on input line 548.
+(luatex.def)             Requested size: 85.35826pt x 85.34978pt.
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 548.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+
+[71
+
+]
+File: Plots/advantage.png Graphic file (type png)
+<use Plots/advantage.png>
+Package luatex.def Info: Plots/advantage.png  used on input line 548.
+(luatex.def)             Requested size: 128.0374pt x 85.29134pt.
+File: Plots/QPU.jpg Graphic file (type jpg)
+<use Plots/QPU.jpg>
+Package luatex.def Info: Plots/QPU.jpg  used on input line 548.
+(luatex.def)             Requested size: 85.35826pt x 85.34978pt.
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 548.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+ [72
+
+]
+File: Plots/advantage.png Graphic file (type png)
+<use Plots/advantage.png>
+Package luatex.def Info: Plots/advantage.png  used on input line 548.
+(luatex.def)             Requested size: 128.0374pt x 85.29134pt.
+File: Plots/QPU.jpg Graphic file (type jpg)
+<use Plots/QPU.jpg>
+Package luatex.def Info: Plots/QPU.jpg  used on input line 548.
+(luatex.def)             Requested size: 85.35826pt x 85.34978pt.
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 548.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+ [73
+
+]
+File: Plots/advantage.png Graphic file (type png)
+<use Plots/advantage.png>
+Package luatex.def Info: Plots/advantage.png  used on input line 548.
+(luatex.def)             Requested size: 128.0374pt x 85.29134pt.
+File: Plots/QPU.jpg Graphic file (type jpg)
+<use Plots/QPU.jpg>
+Package luatex.def Info: Plots/QPU.jpg  used on input line 548.
+(luatex.def)             Requested size: 85.35826pt x 85.34978pt.
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 548.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+ [74
+
+]
+File: Plots/advantage.png Graphic file (type png)
+<use Plots/advantage.png>
+Package luatex.def Info: Plots/advantage.png  used on input line 548.
+(luatex.def)             Requested size: 128.0374pt x 85.29134pt.
+File: Plots/QPU.jpg Graphic file (type jpg)
+<use Plots/QPU.jpg>
+Package luatex.def Info: Plots/QPU.jpg  used on input line 548.
+(luatex.def)             Requested size: 85.35826pt x 85.34978pt.
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 548.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+ [75
+
+]
+File: Plots/advantage.png Graphic file (type png)
+<use Plots/advantage.png>
+Package luatex.def Info: Plots/advantage.png  used on input line 548.
+(luatex.def)             Requested size: 128.0374pt x 85.29134pt.
+File: Plots/QPU.jpg Graphic file (type jpg)
+<use Plots/QPU.jpg>
+Package luatex.def Info: Plots/QPU.jpg  used on input line 548.
+(luatex.def)             Requested size: 85.35826pt x 85.34978pt.
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 548.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+ [76
+
+]
+<Plots/4x4_graph.png, id=715, 300.12125pt x 295.1025pt>
 File: Plots/4x4_graph.png Graphic file (type png)
 <use Plots/4x4_graph.png>
-Package luatex.def Info: Plots/4x4_graph.png  used on input line 532.
+Package luatex.def Info: Plots/4x4_graph.png  used on input line 575.
 (luatex.def)             Requested size: 128.0374pt x 125.90096pt.
 File: logos/tu.pdf Graphic file (type pdf)
 <use logos/tu.pdf>
-Package luatex.def Info: logos/tu.pdf  used on input line 532.
+Package luatex.def Info: logos/tu.pdf  used on input line 575.
 (luatex.def)             Requested size: 140.30132pt x 22.76271pt.
- [22
+ [77
 
 <./Plots/4x4_graph.png>]
-<Plots/qubo_ising.png, id=253, 829.0975pt x 372.39125pt>
+File: Plots/4x4_graph.png Graphic file (type png)
+<use Plots/4x4_graph.png>
+Package luatex.def Info: Plots/4x4_graph.png  used on input line 575.
+(luatex.def)             Requested size: 128.0374pt x 125.90096pt.
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 575.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+ [78
+
+]
+File: Plots/4x4_graph.png Graphic file (type png)
+<use Plots/4x4_graph.png>
+Package luatex.def Info: Plots/4x4_graph.png  used on input line 575.
+(luatex.def)             Requested size: 128.0374pt x 125.90096pt.
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 575.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+ [79
+
+]
+File: Plots/4x4_graph.png Graphic file (type png)
+<use Plots/4x4_graph.png>
+Package luatex.def Info: Plots/4x4_graph.png  used on input line 575.
+(luatex.def)             Requested size: 128.0374pt x 125.90096pt.
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 575.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+ [80
+
+]
+File: Plots/4x4_graph.png Graphic file (type png)
+<use Plots/4x4_graph.png>
+Package luatex.def Info: Plots/4x4_graph.png  used on input line 575.
+(luatex.def)             Requested size: 128.0374pt x 125.90096pt.
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 575.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+
+[81
+
+]
+File: Plots/4x4_graph.png Graphic file (type png)
+<use Plots/4x4_graph.png>
+Package luatex.def Info: Plots/4x4_graph.png  used on input line 575.
+(luatex.def)             Requested size: 128.0374pt x 125.90096pt.
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 575.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+ [82
+
+]
+File: Plots/4x4_graph.png Graphic file (type png)
+<use Plots/4x4_graph.png>
+Package luatex.def Info: Plots/4x4_graph.png  used on input line 575.
+(luatex.def)             Requested size: 128.0374pt x 125.90096pt.
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 575.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+ [83
+
+]
+File: Plots/4x4_graph.png Graphic file (type png)
+<use Plots/4x4_graph.png>
+Package luatex.def Info: Plots/4x4_graph.png  used on input line 575.
+(luatex.def)             Requested size: 128.0374pt x 125.90096pt.
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 575.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+ [84
+
+]
+File: Plots/4x4_graph.png Graphic file (type png)
+<use Plots/4x4_graph.png>
+Package luatex.def Info: Plots/4x4_graph.png  used on input line 575.
+(luatex.def)             Requested size: 128.0374pt x 125.90096pt.
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 575.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+ [85
+
+]
+File: Plots/4x4_graph.png Graphic file (type png)
+<use Plots/4x4_graph.png>
+Package luatex.def Info: Plots/4x4_graph.png  used on input line 575.
+(luatex.def)             Requested size: 128.0374pt x 125.90096pt.
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 575.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+ [86
+
+]
+<Plots/qubo_ising.png, id=799, 829.0975pt x 372.39125pt>
 File: Plots/qubo_ising.png Graphic file (type png)
 <use Plots/qubo_ising.png>
-Package luatex.def Info: Plots/qubo_ising.png  used on input line 555.
+Package luatex.def Info: Plots/qubo_ising.png  used on input line 598.
 (luatex.def)             Requested size: 156.49014pt x 70.28345pt.
 
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 555--555
+Overfull \hbox (14.22636pt too wide) in paragraph at lines 598--598
 [][] 
  []
 
 File: logos/tu.pdf Graphic file (type pdf)
 <use logos/tu.pdf>
-Package luatex.def Info: logos/tu.pdf  used on input line 555.
+Package luatex.def Info: logos/tu.pdf  used on input line 598.
 (luatex.def)             Requested size: 140.30132pt x 22.76271pt.
-[23
+[87
 
 <./Plots/qubo_ising.png>]
-<Plots/G_emb.png, id=263, 850.17625pt x 550.055pt>
+File: Plots/qubo_ising.png Graphic file (type png)
+<use Plots/qubo_ising.png>
+Package luatex.def Info: Plots/qubo_ising.png  used on input line 598.
+(luatex.def)             Requested size: 156.49014pt x 70.28345pt.
+
+Overfull \hbox (14.22636pt too wide) in paragraph at lines 598--598
+[][] 
+ []
+
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 598.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+[88
+
+]
+File: Plots/qubo_ising.png Graphic file (type png)
+<use Plots/qubo_ising.png>
+Package luatex.def Info: Plots/qubo_ising.png  used on input line 598.
+(luatex.def)             Requested size: 156.49014pt x 70.28345pt.
+
+Overfull \hbox (14.22636pt too wide) in paragraph at lines 598--598
+[][] 
+ []
+
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 598.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+[89
+
+]
+File: Plots/qubo_ising.png Graphic file (type png)
+<use Plots/qubo_ising.png>
+Package luatex.def Info: Plots/qubo_ising.png  used on input line 598.
+(luatex.def)             Requested size: 156.49014pt x 70.28345pt.
+
+Overfull \hbox (14.22636pt too wide) in paragraph at lines 598--598
+[][] 
+ []
+
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 598.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+[90
+
+]
+File: Plots/qubo_ising.png Graphic file (type png)
+<use Plots/qubo_ising.png>
+Package luatex.def Info: Plots/qubo_ising.png  used on input line 598.
+(luatex.def)             Requested size: 156.49014pt x 70.28345pt.
+
+Overfull \hbox (14.22636pt too wide) in paragraph at lines 598--598
+[][] 
+ []
+
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 598.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+[91
+
+]
+<Plots/G_emb.png, id=842, 850.17625pt x 550.055pt>
 File: Plots/G_emb.png Graphic file (type png)
 <use Plots/G_emb.png>
-Package luatex.def Info: Plots/G_emb.png  used on input line 572.
+Package luatex.def Info: Plots/G_emb.png  used on input line 615.
 (luatex.def)             Requested size: 184.9429pt x 119.65277pt.
 
-Overfull \hbox (14.22638pt too wide) in paragraph at lines 572--572
+Overfull \hbox (14.22638pt too wide) in paragraph at lines 615--615
 [] 
  []
 
 
-Overfull \vbox (36.37341pt too high) detected at line 572
+Overfull \vbox (36.37341pt too high) detected at line 615
  []
 
 File: logos/tu.pdf Graphic file (type pdf)
 <use logos/tu.pdf>
-Package luatex.def Info: logos/tu.pdf  used on input line 572.
+Package luatex.def Info: logos/tu.pdf  used on input line 615.
 (luatex.def)             Requested size: 140.30132pt x 22.76271pt.
-[24
+[92
 
 <./Plots/G_emb.png>]
-<Plots/graph_cut.png, id=273, 453.695pt x 443.6575pt>
+File: Plots/G_emb.png Graphic file (type png)
+<use Plots/G_emb.png>
+Package luatex.def Info: Plots/G_emb.png  used on input line 615.
+(luatex.def)             Requested size: 184.9429pt x 119.65277pt.
+
+Overfull \hbox (14.22638pt too wide) in paragraph at lines 615--615
+[] 
+ []
+
+
+Overfull \vbox (36.37341pt too high) detected at line 615
+ []
+
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 615.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+[93
+
+]
+File: Plots/G_emb.png Graphic file (type png)
+<use Plots/G_emb.png>
+Package luatex.def Info: Plots/G_emb.png  used on input line 615.
+(luatex.def)             Requested size: 184.9429pt x 119.65277pt.
+
+Overfull \hbox (14.22638pt too wide) in paragraph at lines 615--615
+[] 
+ []
+
+
+Overfull \vbox (36.37341pt too high) detected at line 615
+ []
+
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 615.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+[94
+
+]
+File: Plots/G_emb.png Graphic file (type png)
+<use Plots/G_emb.png>
+Package luatex.def Info: Plots/G_emb.png  used on input line 615.
+(luatex.def)             Requested size: 184.9429pt x 119.65277pt.
+
+Overfull \hbox (14.22638pt too wide) in paragraph at lines 615--615
+[] 
+ []
+
+
+Overfull \vbox (36.37341pt too high) detected at line 615
+ []
+
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 615.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+[95
+
+]
+<Plots/graph_cut.png, id=877, 453.695pt x 443.6575pt>
 File: Plots/graph_cut.png Graphic file (type png)
 <use Plots/graph_cut.png>
-Package luatex.def Info: Plots/graph_cut.png  used on input line 599.
+Package luatex.def Info: Plots/graph_cut.png  used on input line 642.
 (luatex.def)             Requested size: 113.81102pt x 111.2932pt.
 File: logos/tu.pdf Graphic file (type pdf)
 <use logos/tu.pdf>
-Package luatex.def Info: logos/tu.pdf  used on input line 599.
+Package luatex.def Info: logos/tu.pdf  used on input line 642.
 (luatex.def)             Requested size: 140.30132pt x 22.76271pt.
- [25
+ [96
 
 <./Plots/graph_cut.png>]
-<Plots/ex.pdf, id=283, 364.75989pt x 239.4296pt>
+File: Plots/graph_cut.png Graphic file (type png)
+<use Plots/graph_cut.png>
+Package luatex.def Info: Plots/graph_cut.png  used on input line 642.
+(luatex.def)             Requested size: 113.81102pt x 111.2932pt.
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 642.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+ [97
+
+]
+File: Plots/graph_cut.png Graphic file (type png)
+<use Plots/graph_cut.png>
+Package luatex.def Info: Plots/graph_cut.png  used on input line 642.
+(luatex.def)             Requested size: 113.81102pt x 111.2932pt.
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 642.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+ [98
+
+]
+File: Plots/graph_cut.png Graphic file (type png)
+<use Plots/graph_cut.png>
+Package luatex.def Info: Plots/graph_cut.png  used on input line 642.
+(luatex.def)             Requested size: 113.81102pt x 111.2932pt.
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 642.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+ [99
+
+]
+File: Plots/graph_cut.png Graphic file (type png)
+<use Plots/graph_cut.png>
+Package luatex.def Info: Plots/graph_cut.png  used on input line 642.
+(luatex.def)             Requested size: 113.81102pt x 111.2932pt.
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 642.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+ [100
+
+]
+File: Plots/graph_cut.png Graphic file (type png)
+<use Plots/graph_cut.png>
+Package luatex.def Info: Plots/graph_cut.png  used on input line 642.
+(luatex.def)             Requested size: 113.81102pt x 111.2932pt.
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 642.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+ [101
+
+]
+File: Plots/graph_cut.png Graphic file (type png)
+<use Plots/graph_cut.png>
+Package luatex.def Info: Plots/graph_cut.png  used on input line 642.
+(luatex.def)             Requested size: 113.81102pt x 111.2932pt.
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 642.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+ [102
+
+]
+File: Plots/graph_cut.png Graphic file (type png)
+<use Plots/graph_cut.png>
+Package luatex.def Info: Plots/graph_cut.png  used on input line 642.
+(luatex.def)             Requested size: 113.81102pt x 111.2932pt.
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 642.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+ [103
+
+]
+<Plots/ex.pdf, id=944, 364.75989pt x 239.4296pt>
 File: Plots/ex.pdf Graphic file (type pdf)
 <use Plots/ex.pdf>
-Package luatex.def Info: Plots/ex.pdf  used on input line 629.
+Package luatex.def Info: Plots/ex.pdf  used on input line 672.
 (luatex.def)             Requested size: 199.16928pt x 130.73679pt.
 
-Overfull \hbox (56.9055pt too wide) in paragraph at lines 629--629
+Overfull \hbox (56.9055pt too wide) in paragraph at lines 672--672
 [][]  
  []
 
 File: logos/tu.pdf Graphic file (type pdf)
 <use logos/tu.pdf>
-Package luatex.def Info: logos/tu.pdf  used on input line 629.
+Package luatex.def Info: logos/tu.pdf  used on input line 672.
 (luatex.def)             Requested size: 140.30132pt x 22.76271pt.
-[26
+[104
 
 <./Plots/ex.pdf>]
-<Plots/74.png, id=329, 687.56876pt x 546.04pt>
+File: Plots/ex.pdf Graphic file (type pdf)
+<use Plots/ex.pdf>
+Package luatex.def Info: Plots/ex.pdf  used on input line 672.
+(luatex.def)             Requested size: 199.16928pt x 130.73679pt.
+
+Overfull \hbox (56.9055pt too wide) in paragraph at lines 672--672
+[][]  
+ []
+
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 672.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+[105
+
+]
+File: Plots/ex.pdf Graphic file (type pdf)
+<use Plots/ex.pdf>
+Package luatex.def Info: Plots/ex.pdf  used on input line 672.
+(luatex.def)             Requested size: 199.16928pt x 130.73679pt.
+
+Overfull \hbox (56.9055pt too wide) in paragraph at lines 672--672
+[][]  
+ []
+
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 672.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+[106
+
+]
+File: Plots/ex.pdf Graphic file (type pdf)
+<use Plots/ex.pdf>
+Package luatex.def Info: Plots/ex.pdf  used on input line 672.
+(luatex.def)             Requested size: 199.16928pt x 130.73679pt.
+
+Overfull \hbox (56.9055pt too wide) in paragraph at lines 672--672
+[][]  
+ []
+
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 672.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+[107
+
+]
+File: Plots/ex.pdf Graphic file (type pdf)
+<use Plots/ex.pdf>
+Package luatex.def Info: Plots/ex.pdf  used on input line 672.
+(luatex.def)             Requested size: 199.16928pt x 130.73679pt.
+
+Overfull \hbox (56.9055pt too wide) in paragraph at lines 672--672
+[][]  
+ []
+
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 672.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+[108
+
+]
+File: Plots/ex.pdf Graphic file (type pdf)
+<use Plots/ex.pdf>
+Package luatex.def Info: Plots/ex.pdf  used on input line 672.
+(luatex.def)             Requested size: 199.16928pt x 130.73679pt.
+
+Overfull \hbox (56.9055pt too wide) in paragraph at lines 672--672
+[][]  
+ []
+
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 672.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+[109
+
+]
+File: Plots/ex.pdf Graphic file (type pdf)
+<use Plots/ex.pdf>
+Package luatex.def Info: Plots/ex.pdf  used on input line 672.
+(luatex.def)             Requested size: 199.16928pt x 130.73679pt.
+
+Overfull \hbox (56.9055pt too wide) in paragraph at lines 672--672
+[][]  
+ []
+
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 672.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+[110
+
+]
+File: Plots/ex.pdf Graphic file (type pdf)
+<use Plots/ex.pdf>
+Package luatex.def Info: Plots/ex.pdf  used on input line 672.
+(luatex.def)             Requested size: 199.16928pt x 130.73679pt.
+
+Overfull \hbox (56.9055pt too wide) in paragraph at lines 672--672
+[][]  
+ []
+
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 672.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+[111
+
+]
+File: Plots/ex.pdf Graphic file (type pdf)
+<use Plots/ex.pdf>
+Package luatex.def Info: Plots/ex.pdf  used on input line 672.
+(luatex.def)             Requested size: 199.16928pt x 130.73679pt.
+
+Overfull \hbox (56.9055pt too wide) in paragraph at lines 672--672
+[][]  
+ []
+
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 672.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+[112
+
+]
+File: Plots/ex.pdf Graphic file (type pdf)
+<use Plots/ex.pdf>
+Package luatex.def Info: Plots/ex.pdf  used on input line 672.
+(luatex.def)             Requested size: 199.16928pt x 130.73679pt.
+
+Overfull \hbox (56.9055pt too wide) in paragraph at lines 672--672
+[][]  
+ []
+
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 672.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+[113
+
+]
+<Plots/74.png, id=1063, 947.54pt x 752.8125pt>
 File: Plots/74.png Graphic file (type png)
 <use Plots/74.png>
-Package luatex.def Info: Plots/74.png  used on input line 641.
-(luatex.def)             Requested size: 199.16928pt x 158.17258pt.
+Package luatex.def Info: Plots/74.png  used on input line 684.
+(luatex.def)             Requested size: 199.16928pt x 158.23312pt.
 
-Overfull \hbox (56.9055pt too wide) in paragraph at lines 641--641
+Overfull \hbox (56.9055pt too wide) in paragraph at lines 684--684
 [][]  
  []
 
-<Plots/61.png, id=330, 687.56876pt x 546.04pt>
+<Plots/61.png, id=1064, 687.56876pt x 546.04pt>
 File: Plots/61.png Graphic file (type png)
 <use Plots/61.png>
-Package luatex.def Info: Plots/61.png  used on input line 641.
+Package luatex.def Info: Plots/61.png  used on input line 684.
 (luatex.def)             Requested size: 199.16928pt x 158.17258pt.
 
-Overfull \hbox (56.9055pt too wide) in paragraph at lines 641--641
+Overfull \hbox (56.9055pt too wide) in paragraph at lines 684--684
 [][]  
  []
 
 File: logos/tu.pdf Graphic file (type pdf)
 <use logos/tu.pdf>
-Package luatex.def Info: logos/tu.pdf  used on input line 641.
+Package luatex.def Info: logos/tu.pdf  used on input line 684.
 (luatex.def)             Requested size: 140.30132pt x 22.76271pt.
-[27
+[114
 
 <./Plots/74.png><./Plots/61.png>]
-<Plots/before.png, id=339, 687.56876pt x 692.5875pt>
+<Plots/before.png, id=1073, 687.56876pt x 692.5875pt>
 File: Plots/before.png Graphic file (type png)
 <use Plots/before.png>
-Package luatex.def Info: Plots/before.png  used on input line 653.
+Package luatex.def Info: Plots/before.png  used on input line 696.
 (luatex.def)             Requested size: 170.71652pt x 171.96283pt.
 
-Overfull \hbox (28.45274pt too wide) in paragraph at lines 653--653
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 696--696
 [][]  
  []
 
-<Plots/after.png, id=340, 687.56876pt x 698.61pt>
+<Plots/after.png, id=1074, 687.56876pt x 698.61pt>
 File: Plots/after.png Graphic file (type png)
 <use Plots/after.png>
-Package luatex.def Info: Plots/after.png  used on input line 653.
+Package luatex.def Info: Plots/after.png  used on input line 696.
 (luatex.def)             Requested size: 170.71652pt x 173.45816pt.
 
-Overfull \hbox (28.45274pt too wide) in paragraph at lines 653--653
+Overfull \hbox (28.45274pt too wide) in paragraph at lines 696--696
 [][]  
  []
 
 File: logos/tu.pdf Graphic file (type pdf)
 <use logos/tu.pdf>
-Package luatex.def Info: logos/tu.pdf  used on input line 653.
+Package luatex.def Info: logos/tu.pdf  used on input line 696.
 (luatex.def)             Requested size: 140.30132pt x 22.76271pt.
-[28
+[115
 
 <./Plots/before.png><./Plots/after.png>]
 File: logos/tu.pdf Graphic file (type pdf)
 <use logos/tu.pdf>
-Package luatex.def Info: logos/tu.pdf  used on input line 657.
+Package luatex.def Info: logos/tu.pdf  used on input line 700.
 (luatex.def)             Requested size: 140.30132pt x 22.76271pt.
- [29
+ [116
 
 ]
 LaTeX Font Info:    Font shape `TU/FiraSansLight(0)/m/it' will be
-(Font)              scaled to size 7.64058pt on input line 676.
+(Font)              scaled to size 7.64058pt on input line 719.
 File: logos/tu.pdf Graphic file (type pdf)
 <use logos/tu.pdf>
-Package luatex.def Info: logos/tu.pdf  used on input line 676.
+Package luatex.def Info: logos/tu.pdf  used on input line 719.
 (luatex.def)             Requested size: 140.30132pt x 22.76271pt.
- [30
+ [117
 
 ]
 File: logos/tu.pdf Graphic file (type pdf)
 <use logos/tu.pdf>
-Package luatex.def Info: logos/tu.pdf  used on input line 680.
+Package luatex.def Info: logos/tu.pdf  used on input line 723.
 (luatex.def)             Requested size: 140.30132pt x 22.76271pt.
- [31
+ [118
 
 ]
 \tf@nav=\write5
@@ -2808,26 +3975,26 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 )
 
 Here is how much of LuaTeX's memory you used:
- 43486 strings out of 478290
+ 44726 strings out of 478290
  100000,1977958 words of node,token memory allocated
- 2582 words of node memory still in use:
+ 2698 words of node memory still in use:
    33 hlist, 9 vlist, 5 rule, 11 disc, 6 local_par, 51 glue, 31 kern, 14 penalty
-, 95 glyph, 67 attribute, 76 glue_spec, 67 attribute_list, 4 write, 12 pdf_color
+, 95 glyph, 96 attribute, 76 glue_spec, 96 attribute_list, 4 write, 12 pdf_color
 stack, 1 pdf_setmatrix, 1 pdf_save, 1 pdf_restore nodes
-   avail lists: 1:2,2:778,3:251,4:310,5:1032,6:59,7:5304,8:76,9:708,10:21,11:454
-
- 61539 multiletter control sequences out of 65536+600000
- 96 fonts using 31479955 bytes
- 128i,18n,144p,611b,839s stack positions out of 10000i,1000n,20000p,200000b,200000s
+   avail lists: 1:2,2:1011,3:453,4:310,5:1032,6:61,7:5294,8:78,9:711,10:21,11:45
+4
+ 61567 multiletter control sequences out of 65536+600000
+ 96 fonts using 31479823 bytes
+ 128i,18n,144p,611b,845s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </home/yanick/.local/texlive/2022/texmf-dist/fonts/opentype/public/firamath/Fira
 Math-Regular.otf></home/yanick/.local/texlive/2022/texmf-dist/fonts/opentype/pub
 lic/firamath/FiraMath-Regular.otf></home/yanick/.local/texlive/2022/texmf-dist/f
 onts/opentype/public/firamath/FiraMath-Regular.otf></usr/share/fonts/opentype/fi
 ra/FiraSans-Light.otf></usr/share/fonts/opentype/fira/FiraSans-Medium.otf>
-Output written on main.pdf (31 pages, 6605689 bytes).
+Output written on main.pdf (118 pages, 6940012 bytes).
 
-PDF statistics: 433 PDF objects out of 1000 (max. 8388607)
- 316 compressed objects within 4 object streams
- 69 named destinations out of 1000 (max. 131072)
+PDF statistics: 1173 PDF objects out of 1200 (max. 8388607)
+ 959 compressed objects within 10 object streams
+ 243 named destinations out of 1000 (max. 131072)
  64 words of extra memory for PDF output out of 10000 (max. 100000000)
 

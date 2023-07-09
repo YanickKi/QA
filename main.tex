@@ -61,7 +61,7 @@ per-mode=symbol-or-fraction, % m/s im Text, sonst \frac
 % load the theme after all packages
 
 \usetheme[
-  showtotalframes, % show total number of frames in the footline
+  %showtotalframes, % show total number of frames in the footline
 ]{tudo}
 
 % Put settings here, like
@@ -129,96 +129,115 @@ per-mode=symbol-or-fraction, % m/s im Text, sonst \frac
 
 \section{Einleitung}
 
-\begin{frame}{Traveling Salesman problem}
+\begin{frame}{Motivation}
+  \centering
+  \includegraphics[width = 0.6\textwidth]{Plots/LA.jpg}\\
+  \hspace*{12pt}\hbox{\scriptsize {\footnotesize\itshape \href{https://www.supplychainbrain.com/articles/35529-another-month-of-high-volume-at-port-of-los-angeles-while-exports-continue-to-fall}{supplychainbrain.com}}}
+\end{frame}
+
+\begin{frame}{Traveling Salesman Problem}
+  \pause
   \begin{itemize}
+    \setlength\itemsep{1em}
     \item klassisches kombinatorische Optimierungsproblem
+    \pause
     \item Beispiel: Ein Lieferwagen hat $n$ Lieferorte
+    \pause
     \begin{itemize}
       \item[\textrightarrow] $(n-1)!$ verschiedene Routen
     \end{itemize}
+    \pause
     \item NP-hard
     \begin{itemize}
       \item[\textrightarrow] skaliert nicht polynomiell sondern \textbf{exponentiell} mit Systemgröße
     \end{itemize}
     \item Globales Optimum mittels numerischen Lösungsverfahren finden, ist extrem aufwändig
+    \pause
     \item Local search Algorithmen als heuristische Näherungsverfahren nutzen
   \end{itemize}  
 \end{frame}
 
-\begin{frame}{Motivation}
+\begin{frame}{Annealing als Lösung?}
   \begin{columns}
     \column{0.3\linewidth}
-       \centering
+      \centering
        \includegraphics[width = 0.95\textwidth]{Plots/Ising_Modell_2d.png}
        \hspace*{12pt}\hbox{\scriptsize {\footnotesize\itshape \href{https://www.researchgate.net/publication/321920877_Thermalisation_and_Relaxation_of_Quantum_Systems}{Sascha Wald, Thermalisation and Relaxation of Quantum Systems (2017)}}}
        \\ 
        \vspace*{1cm}
-       \scalebox{3}{$E$}
+      \scalebox{3}{$E$}
     \column{0.2 \linewidth}
     \centering  
       \vspace*{2.2cm}
       \scalebox{4}{$\stackrel{?}{\to}$}
     \column{0.3\linewidth}
-      \centering
+     \centering
       \includegraphics[width = 0.95 \textwidth]{Plots/vehicle_routing_problem.jpg}
       \hspace*{12pt}\hbox{\scriptsize {\footnotesize\itshape \href{https://www.r-bloggers.com/2010/11/any-r-packages-to-solve-vehicle-routing-problem/}{r-bloggers.com}}}
       \\
-      \vspace*{1cm}
+     \vspace*{1cm}
       \scalebox{3}{$f$}
  \end{columns}
-\end{frame}
-
-\begin{frame}{Motivation}
-  \centering
-  \includegraphics[width = 0.6\textwidth]{Plots/LA.jpg}
 \end{frame}
 
 \section{Simulated und quantum annealing}
 
 \begin{frame}{Simulated annealing}
+  \pause
   \begin{itemize}
+    \setlength\itemsep{1em}
     \item in Analogie zu auskühlenden Metallen
     \begin{itemize}
+      \pause
       \item schneller auskühlen \textrightarrow suboptimalerer Zustand (amorph)
+      \pause
       \item langsamer auskühlen \textrightarrow optimalerer Zustand (kristallin)
     \end{itemize}
+    \pause
     \item nutzt thermische Fluktuationen, um lokalen Minima zu entkommen
+    \pause
     \item Wahrscheinlichkeit $P_i$ folgen Mastergleichung $\frac{dP_i}{dt} = \sum_j L_{ij} P_j$
+    \pause
     \begin{itemize}
       \item        $L_{ij} = 
       \begin{cases}
-        \left [ 1 + \text{exp}((E_i -E_j) / T_t) \right ]^{-1}  & \, \text{einzelne Spin Differenz} \\
+        \left [ 1 + \text{exp}((E_i -E_j) / T_t) \right ]^{-1}  & \, \text{einzelne Spin-Differenz} \\
         - \sum_{k \neq i} L_{ki}                                & \, i = j \\
         0                                                       & \, \text{sonst}
       \end{cases}
     $
     \end{itemize}
   \end{itemize}
-  \begin{textblock*}{6cm}(9.2cm,3cm) % {block width} (coords)
-  \includegraphics[width = 6.5cm, angle=270,origin=c]{Plots/slow_fast_SA.png}
-  %\hspace*{12pt}\hbox{\scriptsize {\footnotesize\itshape \href{https://en.wikipedia.org/wiki/}{Cyp, wikipedia.org}}}
+  \begin{textblock*}{6cm}(10.4cm,2.05cm) % {block width} (coords)
+    \includegraphics[width = 5cm]{Plots/thermal_annealing.jpg}
+    \hspace*{12pt}\hbox{\scriptsize {\footnotesize\itshape \href{https://doi.org/10.1016/j.physrep.2012.10.002}{V. Bapst et al., \textit{Physics Reports} 523 (2013), editiert}}}
+    \end{textblock*}    
+  \begin{textblock*}{6cm}(10cm,6.5cm) % {block width} (coords)
+  \includegraphics[width = 5cm]{Plots/slow_fast_SA.png}
+  \hspace*{12pt}\hbox{\scriptsize {\footnotesize\itshape \href{https://en.wikipedia.org/wiki/}{Cyp, wikipedia.org}}}
   \end{textblock*}    
-\end{frame}
-
-\begin{frame}{simulated annealing}
-  Bild um die Übergangselemente zu erläutern in Inkscape selber machen
 \end{frame}
 
 \begin{frame}{Quantum Annealing}
   \begin{itemize}
+    \pause
+    \item transversales Ising-Modell $H (t) = \underbrace{- \sum_{ij} J_{ij} \sigma_i^z \sigma_j^z - h \sum_i \sigma_i^z }_{H_\text{f}} \underbrace{- \Gamma (t) \sum_i \sigma_i^x}_{H_\text{i}(t)}  $ \pause
+    \item $H_x (t)$ verursacht Tunneln zwischen Eigenzuständen von $H_0$ \pause
     \begin{textblock*}{5cm}(10.4cm, 2.05cm) % {block width} (coords)
       \includegraphics[width = 5cm]{Plots/tunneling.jpg}
       \hspace*{12pt}\hbox{\scriptsize {\footnotesize\itshape \href{https://doi.org/10.1016/j.physrep.2012.10.002}{V. Bapst et al., \textit{Physics Reports} 523 (2013)}}}
     \end{textblock*}
-    \item transversales Ising Modell $H (t) = \underbrace{- \sum_{ij} J_{ij} \sigma_i^z \sigma_j^z - h \sum_i \sigma_i^z }_{H_0} \underbrace{- \Gamma (t) \sum_i \sigma_i^x}_{H_x(t)}  $ 
-    \item $H_x (t)$ verursacht Tunneln zwischen Eigenzuständen von $H_0$
     \begin{itemize}
+      \pause
       \item schnellere Konvergenz
     \end{itemize}
+    \pause
     \item $\ket{\Psi(t)}$ durch Schrödingergleichung $i\frac{\partial \ket{\Psi(t)}}{\partial t} = H(t) \ket{\Psi(t)}$  \\ festgelegt
+    \pause
     \item wähle monoton fallende Funktionen für $\Gamma(t)$ (\enquote{ausglühen})
   \end{itemize} 
   \vspace*{1cm}
+  \pause
   \begin{block}{Adiabatisches Theorem der Quantenmechanik}
     \begin{center}
      System bleibt im selben Eigenzustand von $H$, wenn sich $H$ hinreichend langsam ändert  
@@ -229,12 +248,14 @@ per-mode=symbol-or-fraction, % m/s im Text, sonst \frac
 
 \begin{frame}{Adiabatische Zeit}
    \begin{itemize}
-    \item minimale Zeit, damit sich System adiabatisch ändert $\tau$
-    \item $\symup{\Delta} (s) = E_1 (s) - E_0 (s)$
-    \item mindestens $\tau \propto \frac{1}{\symup{\Delta} (s)^2}$, schlimmstenfalls $\tau \propto \frac{1}{\symup{\Delta} (s)^3}$
-    \item Problem: $\symup{\Delta} (s)$ sehr klein
+    \setlength\itemsep{1em}
+    \pause
+    \item minimale Zeit, damit sich System adiabatisch ändert $\tau$ \pause
+    \item $\symup{\Delta} (s) = E_1 (s) - E_0 (s)$\pause
+    \item mindestens $\tau \propto \frac{1}{\symup{\Delta} (s)^2}$, schlimmstenfalls $\tau \propto \frac{1}{\symup{\Delta} (s)^3}$\pause
+    \item Problem: $\symup{\Delta} (s)$ sehr klein\pause
     \begin{itemize}
-      \item[\textrightarrow] $\tau \to \infty$
+      \item[\textrightarrow] $\tau \to \infty$ 
     \end{itemize}
    \end{itemize}
    \begin{textblock*}{5cm}(8cm, 4cm) % {block width} (coords)
@@ -245,48 +266,55 @@ per-mode=symbol-or-fraction, % m/s im Text, sonst \frac
 \end{frame}
 
 \begin{frame}{Simulation zu simulated und quantum annealing}
+\begin{textblock*}{5cm}(10cm, 1.5cm) % {block width} (coords)
+  \begin{equation*}
+   {H (t) = \underbrace{- \sum_{ij} J_{ij} \sigma_i^z \sigma_j^z - h \sum_i \sigma_i^z }_{H_\text{f}} \underbrace{- \Gamma (t) \sum_i \sigma_i^x}_{H_\text{i}(t)}}
+  \end{equation*}
+\end{textblock*}
+  \pause
   \begin{itemize}
     \item $P_\text{SA}(t)$: Wahrscheinlichkeit System in GZ zu finden
     \item $P_\text{QA}(t)$ = $|\braket{g}{\Psi(t)}|^2$: Wahrscheinlichkeit System in GZ $\ket{g}$ von $H_0$ zu finden
     \item $P_\text{SA}^{\text{st}}(T)$: Boltzmann-Faktor des GZ von $H_0$
     \item $P_\text{QA}^{\text{st}}(\Gamma) = | \braket{g}{\Psi_{\Gamma}} |^2$ mit $\ket{\Psi_{\Gamma}}$ als GZ von $H$
-    \item $\lim_{t \to 0} \Gamma(t) = \lim_{t \to 0} T(t) = \infty$ bzw. $\lim_{t \to -\infty} \Gamma(t) = \lim_{t \to -\infty} T(t) = \infty$
+    \item $\lim_{t \to 0} \Gamma(t) = \lim_{t \to 0} T(t) = \infty$
+    \pause
     \begin{itemize}
       \item[\textrightarrow] Superposition aller Zustände gleicher Amplitude (QA)
       \item[\textrightarrow] Alle Zustände gleich wahrscheinlich (SA) 
-    \end{itemize}
-    \item Idealfall (adiabatisch): $\lim_{t \to \infty} P_{QA}(t) = \lim_{t \to \infty} P_{SA}(t) = 1$
+    \end{itemize} \pause
+    \item Idealfall (adiabatisch): $\lim_{t \to \infty} P_{QA}(t) = \lim_{t \to \infty} P_{SA}(t) = 1$ \pause
     \begin{itemize}
-      \item[\textrightarrow] Grundzustand gefunden
-      \item[\textrightarrow] sonst: In einem lokalen Minimum \enquote{hängen} geblieben
+      \item[\textrightarrow] Grundzustand gefunden \pause
+      \item[\textrightarrow] sonst: In einem lokalen Minimum \enquote{hängen} geblieben \pause
     \end{itemize}
-    \item 8 Spins 
+    \item 8 spins 
   \end{itemize}
-  \begin{textblock*}{5cm}(10cm, 4cm) % {block width} (coords)
+  \begin{textblock*}{5cm}(10cm, 4.2cm) % {block width} (coords)
     \includegraphics[width = 5.2cm]{Plots/SimAnnealingLandschaft.png}
-    \hspace*{12pt}\hbox{\scriptsize {\footnotesize\itshape \href{https://de.wikipedia.org/wiki/Simulated_Annealing}{K. Fleischer, wikipedia.org}}}
+    \hspace*{12pt}\hbox{\scriptsize {\footnotesize\itshape \href{https://de.wikipedia.org/wiki/Simulated_Annealing}{Fleischer, K., wikipedia.org}}}
   \end{textblock*}
   \begin{textblock*}{5cm}(0.5cm, 9cm)
-    {\footnotesize \href{https://arxiv.org/abs/cond-mat/9804280}{Kadowaki, T, Nishimori, H, \textit{PHYSICAL REVIEW E } 1998}}
+    {\footnotesize \href{https://arxiv.org/abs/cond-mat/9804280}{Kadowaki, T., Nishimori, H., \textit{PHYSICAL REVIEW E } 1998}}
   \end{textblock*}
     
 \end{frame}
 
 \begin{frame}{Ergebnisse zu simulated und quantum annealing}
-  \vspace*{-0.5cm}
+  \vspace*{-2.5cm}
   \begin{itemize}
     \item $P_\text{SA}(t)$: Wahrscheinlichkeit System in GZ zu finden
     \item $P_\text{QA}(t)$ = $|\braket{g}{\Psi(t)}|^2$: Wahrscheinlichkeit System in GZ $\ket{g}$ von $H_0$ zu finden
     \item $P_\text{SA}^{\text{st}}(T)$: Boltzmann-Faktor des GZ von $H_0$
     \item $P_\text{QA}^{\text{st}}(\Gamma) = | \braket{g}{\Psi_{\Gamma}} |^2$ mit $\ket{\Psi_{\Gamma}}$ als GZ von $H$
   \end{itemize}
-  \vspace{1.5cm}
-  \hspace{2cm}
-  \fbox{\parbox{0.15 \textwidth}{
-  \begin{itemize}
-  \item $J_{ij}  = const$
-  \item $h = 0.1$
-  \end{itemize}}}
+  \begin{textblock*}{3cm}(10.2cm, 1.8cm)
+  \fbox{\parbox{\textwidth}{
+    \begin{itemize}
+    \item $J_{ij}  = const > 0$
+    \item $h = 0.1$
+    \end{itemize}}}
+  \end{textblock*}
   \begin{textblock*}{7.5cm}(7.7cm, 3.5cm) % {block width} (coords)
   \begin{center}
     {\color{tugreen}
@@ -295,76 +323,90 @@ per-mode=symbol-or-fraction, % m/s im Text, sonst \frac
     \includegraphics[width = 7.5cm]{Plots/ln.png}
     \end{textblock*}
     \begin{textblock*}{5cm}(0.5cm, 9cm)
-      {\footnotesize \href{https://arxiv.org/abs/cond-mat/9804280}{Kadowaki, T, Nishimori, H, \textit{PHYSICAL REVIEW E } 1998}}
+      {\footnotesize \href{https://arxiv.org/abs/cond-mat/9804280}{Kadowaki, T., Nishimori, H., \textit{PHYSICAL REVIEW E } 1998}}
+    \end{textblock*}
+    \begin{textblock*}{3.5cm}(1.7cm, 5.3cm)
+      \centering
+      \includegraphics[width = 4.5cm]{Plots/ln.pdf}
     \end{textblock*}
 \end{frame}
 
 \begin{frame}{Ergebnisse zu simulated und quantum annealing}
-  \vspace*{-0.5cm}
+  \vspace*{-2.5cm}
   \begin{itemize}
     \item $P_\text{SA}(t)$: Wahrscheinlichkeit System in GZ zu finden
     \item $P_\text{QA}(t)$ = $|\braket{g}{\Psi(t)}|^2$: Wahrscheinlichkeit System in GZ $\ket{g}$ von $H_0$ zu finden
     \item $P_\text{SA}^{\text{st}}(T)$: Boltzmann-Faktor des GZ von $H_0$
     \item $P_\text{QA}^{\text{st}}(\Gamma) = | \braket{g}{\Psi_{\Gamma}} |^2$ mit $\ket{\Psi_{\Gamma}}$ als GZ von $H$
   \end{itemize}
-  \vspace{1.5cm}
-  \hspace{2cm}
-  \fbox{\parbox{0.15 \textwidth}{
-  \begin{itemize}
-  \item $J_{ij}  = const$
-  \item $h = 0.1$
-  \end{itemize}}}
+  \begin{textblock*}{3cm}(10.2cm, 1.8cm)
+  \fbox{\parbox{\textwidth}{
+    \begin{itemize}
+    \item $J_{ij}  = const > 0$
+    \item $h = 0.1$
+    \end{itemize}}}
+  \end{textblock*}
   \begin{textblock*}{7.5cm}(7.7cm, 3.5cm) % {block width} (coords)
-    \begin{center}
-      {\color{tugreen}
-      $\Gamma(t) = T(t) = 3/\sqrt{t}$}
-    \end{center}
+  \begin{center}
+    {\color{tugreen}
+    $\Gamma(t) = T(t) = 3/ \sqrt{t}$ }
+  \end{center}
     \includegraphics[width = 7.5cm]{Plots/sqrt.png}
-  \end{textblock*}
-  \begin{textblock*}{5cm}(0.5cm, 9cm)
-    {\footnotesize \href{https://arxiv.org/abs/cond-mat/9804280}{Kadowaki, T, Nishimori, H, \textit{PHYSICAL REVIEW E } 1998}}
-  \end{textblock*}
+    \end{textblock*}
+    \begin{textblock*}{5cm}(0.5cm, 9cm)
+      {\footnotesize \href{https://arxiv.org/abs/cond-mat/9804280}{Kadowaki, T., Nishimori, H., \textit{PHYSICAL REVIEW E } 1998}}
+    \end{textblock*}
+    \begin{textblock*}{3.5cm}(1.7cm, 5.3cm)
+      \centering
+      \includegraphics[width = 4.5cm]{Plots/sqrt.pdf}
+    \end{textblock*}
 \end{frame}
 
 \begin{frame}{Ergebnisse zu simulated und quantum annealing}
-  \vspace*{-0.5cm}
+  \vspace*{-2.5cm}
   \begin{itemize}
     \item $P_\text{SA}(t)$: Wahrscheinlichkeit System in GZ zu finden
     \item $P_\text{QA}(t)$ = $|\braket{g}{\Psi(t)}|^2$: Wahrscheinlichkeit System in GZ $\ket{g}$ von $H_0$ zu finden
     \item $P_\text{SA}^{\text{st}}(T)$: Boltzmann-Faktor des GZ von $H_0$
     \item $P_\text{QA}^{\text{st}}(\Gamma) = | \braket{g}{\Psi_{\Gamma}} |^2$ mit $\ket{\Psi_{\Gamma}}$ als GZ von $H$
   \end{itemize}
-  \vspace{1.5cm}
-  \hspace{2cm}
-  \fbox{\parbox{0.15 \textwidth}{
-  \begin{itemize}
-  \item $J_{ij}  = const$
-  \item $h = 0.1$
-  \end{itemize}}}
+  \begin{textblock*}{3cm}(10.2cm, 1.8cm)
+  \fbox{\parbox{\textwidth}{
+    \begin{itemize}
+    \item $J_{ij}  = const > 0$
+    \item $h = 0.1$
+    \end{itemize}}}
+  \end{textblock*}
   \begin{textblock*}{7.5cm}(7.7cm, 3.5cm) % {block width} (coords)
-    \begin{center}
-      {\color{tugreen}
-    $\Gamma(t) = T(t) = 3/t$}
+  \begin{center}
+    {\color{tugreen}
+    $\Gamma(t) = T(t) = 3/t$ }
   \end{center}
     \includegraphics[width = 7.5cm]{Plots/t.png}
-  \end{textblock*}
-  \begin{textblock*}{5cm}(0.5cm, 9cm)
-    {\footnotesize \href{https://arxiv.org/abs/cond-mat/9804280}{Kadowaki, T, Nishimori, H, \textit{PHYSICAL REVIEW E } 1998}}
-  \end{textblock*}
+    \end{textblock*}
+    \begin{textblock*}{5cm}(0.5cm, 9cm)
+      {\footnotesize \href{https://arxiv.org/abs/cond-mat/9804280}{Kadowaki, T., Nishimori, H., \textit{PHYSICAL REVIEW E } 1998}}
+    \end{textblock*}
+    \begin{textblock*}{3.5cm}(1.7cm, 5.3cm)
+      \centering
+      \includegraphics[width = 4.5cm]{Plots/t.pdf}
+    \end{textblock*}
 \end{frame}
 
 \section{Quadratic unconstrained binary optimization}
 
 \begin{frame}{Binäre Variable}
+  \pause
   \begin{itemize}
-    \item $x \in \{0,1\}$
+    \setlength\itemsep{1em}
+    \item $x \in \{0,1\}$ \pause
     \item Beispiel: Aufenthaltsort von einem Truck
-    \item Formulierung als Graph mit $N$ Knoten $i$
+    \item Formulierung als Graph mit $N$ Knoten $i$ \pause
     \begin{itemize}
-      \item ordne jedem Knoten $i$ eine binäre Varibale zu
-      \item jedem Truck kann ein Vektor $x^j = (x^j_1, \ldots, x^j_N)$ von binären Variablen zugeordnet werden
+      \item ordne jedem Knoten $i$ eine binäre Variable zu \pause
+      \item jedem Truck kann ein Vektor $x^j = (x^j_1, \ldots, x^j_N)$ von binären Variablen zugeordnet werden 
     \end{itemize}
-    \item Truck $j$ an Knoten $i$ \textrightarrow $x^j_i = 1$ sonst $x^j_k = 0$
+    \item Truck $j$ an Knoten $i$ \textrightarrow $x^j_i = 1$ sonst $x^j_k = 0$ 
   \end{itemize} 
 \end{frame}
 
@@ -436,37 +478,38 @@ per-mode=symbol-or-fraction, % m/s im Text, sonst \frac
   \end{columns}
 \end{frame}
 
-\begin{frame}{Quadratic unconstrained binary optimization (QUBO)}
+\begin{frame}{Quadratic unconstrained binary optimization (QUBO)} \pause
   \begin{block}{Aufgabe}
     \center
-     Minimiere $ f(\underline{x}, \underline{\underline{Q}}) = \sum_{ij} Q_{ij} x_ix_j$
+     Minimiere $ f(\underline{x}, \underline{\underline{Q}}) = \sum_{ij} Q_{ij} x_ix_j$ \pause
   \end{block}
   \begin{itemize}
-    \item $x_i \in \{0,1\}$ als binäre Variable
+    \setlength\itemsep{1em}
+    \item $x_i \in \{0,1\}$ als binäre Variable \pause
     \begin{itemize}
-      \item lässt sich mittels $s_i = 2x_i - 1 \in \{-1, 1\}$ auf Ising-Variablen (\enquote{spin}) transformieren
+      \item lässt sich mittels $s_i = 2x_i - 1 \in \{-1, 1\}$ auf Ising-Variablen (\enquote{spin-1/2}) transformieren \pause
     \end{itemize}
-    \item $Q_{ij}$ definiert Wechselwirkung zwischen $x_i$
+    \item $Q_{ij}$ definiert Wechselwirkung zwischen $x_i$ \pause
     \begin{itemize}
       \item allg. hermitesch (symmetrisch im Ising-Modell)
     \end{itemize}
   \end{itemize}
 \end{frame}
-
-\begin{frame}{Quadratic unconstrained binary optimization constrains}
+ 
+\begin{frame}{Quadratic unconstrained binary optimization constrains} \pause
   \begin{itemize}
-    \item constraints lassen sich nicht direkt in der Hardware implementieren
+    \item constraints lassen sich nicht direkt in der Hardware implementieren \pause
     \begin{itemize}
-      \item constraints als \enquote{Strafe} in der Kostenfunktion implementieren
+      \item constraints als \enquote{Strafe} in der Kostenfunktion implementieren \pause
     \end{itemize}
-    \item Beispiel: Ein Truck darf sich nur an einem Punkt aufhalten
-    \begin{itemize}
-      \item $\sum_{i} x_i = 1 \iff \sum_i x_i - 1 = 0$
-      \item in QUBO Problem umwandeln \textrightarrow $g(x_i) = (\sum_i x_i - 1)^2 $
-      \item[\textrightarrow] $f \to f + \lambda g$
-      \item constraint verletzt \textrightarrow Kostenfunktion erhöht
+    \item Beispiel: Ein Truck darf sich nur an einem Punkt aufhalten \pause
+    \begin{itemize} 
+      \item $\sum_{i} x_i = 1 \iff \sum_i x_i - 1 = 0$ \pause
+      \item in QUBO Problem umwandeln \textrightarrow $g(x_i) = (\sum_i x_i - 1)^2 $ \pause
+      \item[\textrightarrow] $f \to f + \lambda g$ \pause
+      \item constraint verletzt \textrightarrow Kostenfunktion erhöht \pause
     \end{itemize}
-    \item Lagrangeparameter $\lambda$ sehr groß wählen, damit constraint eingehalten
+    \item Lagrangeparameter $\lambda$ sehr groß wählen, damit constraint eingehalten 
   \end{itemize}
 \end{frame}
 
@@ -474,29 +517,29 @@ per-mode=symbol-or-fraction, % m/s im Text, sonst \frac
 
 \begin{frame}{Quantum annealer von D-Wave Systems}
   \begin{itemize}
-    \item D-Wave Systems als Hersteller von quantum annealer
-    \item Qantum Processing Unit (QPU) mit QUBITs und couplern
+    \item D-Wave Systems als Hersteller von quantum annealer \pause
+    \item Qantum Processing Unit (QPU) mit QUBITs und couplern \pause
     \begin{itemize}
-      \item QUBITs und coupler sind gewichtet 
+      \item QUBITs und coupler sind gewichtet  \pause
     \end{itemize}
-    \item neuste Version: 5000 QUBITs mit 15 couplern pro QUBIT
-    \item Nach annealing-Prozess die QUBIts auslesen
+    \item neuste Version: 5000 QUBITs mit 15 couplern pro QUBIT \pause
+    \item Nach annealing-Prozess die QUBITs auslesen \pause
     \begin{itemize}
-      \item[\textrightarrow] mögliches Energieminimum gefunden
+      \item[\textrightarrow] mögliches Energieminimum gefunden \pause
     \end{itemize}
   \end{itemize}
-  \vspace*{1cm}
-  Unterschied zu Quantencomputer
+  \vspace*{1cm} 
+  Unterschied zu Quantencomputer \pause
     \begin{itemize}
-      \item Quantum annealer nur für kombinatorische Optimierungsprobleme
-      \item Quantencomputer nutzen Quantengatter (unitäre Operationen)
+      \item Quantum annealer nur für kombinatorische Optimierungsprobleme \pause
+      \item Quantencomputer nutzen Quantengatter (unitäre Operationen) \pause
       \begin{itemize}
-        \item kann mehr Problem lösen
+        \item kann mehr Probleme lösen \pause
       \end{itemize}
     \end{itemize}
   \begin{textblock*}{5cm}(11cm, 2cm) % {block width} (coords)
     \includegraphics[width = 4.5cm]{Plots/advantage.png}
-    \hspace*{12pt}\hbox{\scriptsize {\footnotesize\itshape \href{https://techcrunch.com/2020/09/29/d-wave-launches-its-5000-qubit-advantage-system/?guccounter=1&guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&guce_referrer_sig=AQAAABB4SLnDOFLkzRsw3QLBP_BiwlTIN9jcs7feoLJi2DljlJifaHVtboTJQonfs2ulmdbT5fTNEU2jmeVP5gqNb_JTbAo88uHq76dEKRkeHYKpmXgEykCXVF3Y_-0ElGKOQqpS-rDrEZJWjMQh3x6OqCY4Pqpfeir7y8_RZCm6FRIW}{techchrunch.com}}}
+    \hspace*{12pt}\hbox{\scriptsize {\footnotesize\itshape \href{https://techcrunch.com/2020/09/29/d-wave-launches-its-5000-QUBIT-advantage-system/?guccounter=1&guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&guce_referrer_sig=AQAAABB4SLnDOFLkzRsw3QLBP_BiwlTIN9jcs7feoLJi2DljlJifaHVtboTJQonfs2ulmdbT5fTNEU2jmeVP5gqNb_JTbAo88uHq76dEKRkeHYKpmXgEykCXVF3Y_-0ElGKOQqpS-rDrEZJWjMQh3x6OqCY4Pqpfeir7y8_RZCm6FRIW}{techchrunch.com}}}
   \end{textblock*}
   \begin{textblock*}{3cm}(12cm,5.8cm) % {block width} (coords)
     \includegraphics[width = 3cm]{Plots/QPU.jpg}
@@ -504,26 +547,26 @@ per-mode=symbol-or-fraction, % m/s im Text, sonst \frac
   \end{textblock*}  
 \end{frame}
 
-\begin{frame}{Embedding}
+\begin{frame}{Embedding} \pause
   \begin{itemize}
-    \item D-Wave's QPU kann als Graph $U$ gesehen werden
+    \item D-Wave's QPU kann als Graph $U$ gesehen werden \pause
     \begin{itemize}
-      \item Gewichtete Vertices (QUBIT) $i \in V(U)$ 
-      \item Gewichtete Kanten (coupler) $ij \in E(U)$
+      \item Gewichtete Vertices (QUBIT) $i \in V(U)$ \pause
+      \item Gewichtete Kanten (coupler) $ij \in E(U)$ \pause
     \end{itemize}
-    \item Gewichte:
+    \item Gewichte: \pause
     \begin{itemize}
       \item $h_i (t)$ \enquote{QUBIT bias}
       \item $\symup{\Delta}_i(t)$ \enquote{tunneling amplitude}
       \item $J_{ij}(t)$ \enquote{coupler strength}
-    \end{itemize}
-    \item formuliere transversalen Ising-Hamiltonian auf Graph $G$
-    \item $H(t) = \sum_{i \in V(G)} h_i(t) \sigma_i^z + \sum_{ij \in E(G)} J_{ij}(t) \sigma_i^z \sigma_j^z + \sum_{i \in V(G)} \Delta_i (t) \sigma_i^x$
-    \item Eigenergie des Ising-Hamiltonians $\epsilon(s_1, \ldots, s_n) = \sum_{i \in V(G)} h_i s_i + \sum_{ij \in E(G)} J_{ij} s_i s_j$
+    \end{itemize} \pause
+    \item formuliere transversalen Ising-Hamiltonian auf Graph $G$ 
+    \item $H(t) = \sum_{i \in V(G)} h_i(t) \sigma_i^z + \sum_{ij \in E(G)} J_{ij}(t) \sigma_i^z \sigma_j^z + \sum_{i \in V(G)} \Delta_i (t) \sigma_i^x$ \pause
+    \item Eigenergie des Ising-Hamiltonians $\epsilon(s_1, \ldots, s_n) = \sum_{i \in V(G)} h_i s_i + \sum_{ij \in E(G)} J_{ij} s_i s_j$ \pause
     \begin{itemize}
-      \item spins $s_i \in \{-1,1\}$
+      \item spins $s_i \in \{-1,1\}$ \pause
     \end{itemize}
-    \item Suche nach Grundzustandsenergie ist das \enquote{Ising Problem}
+    \item Suche nach Grundzustandsenergie ist das \enquote{Ising-Problem} 
   \end{itemize}
   \begin{textblock*}{5cm}(10.4cm, 3cm) % {block width} (coords)
     \includegraphics[width = 4.5cm]{Plots/4x4_graph.png}
@@ -537,59 +580,59 @@ per-mode=symbol-or-fraction, % m/s im Text, sonst \frac
     \hspace*{12pt}\hbox{\scriptsize {\footnotesize\itshape \href{https://doi.org/10.1016/j.physrep.2012.10.002}{V. Choi, \textit{D-Wave Systems Inc.} (2008)}}}
   \end{textblock*}
    \begin{itemize}
-    \item Ising Problem äquivalent zu QUBO Problem auf dem selben Graph $G$
+    \item Ising Problem äquivalent zu QUBO Problem auf dem selben Graph $G$ \pause
     \begin{itemize}
-      \item $Y(x_1, \ldots, x_n) = \sum_{i \in V(G)} c_i x_i - \sum_{ij \in E(G)} J_{ij} x_i x_j $ maximieren
-      \item $x_i \in \{0,1\}$ 
+      \item $Y(x_1, \ldots, x_n) = \sum_{i \in V(G)} c_i x_i - \sum_{ij \in E(G)} J_{ij} x_i x_j $ maximieren 
+      \item $x_i \in \{0,1\}$  \pause
     \end{itemize}
   \end{itemize}
     \begin{block}{Ziel}
-       $G$ in $U$ einbetten (\enquote{subgraph-embedding}) und somit das Ising/QUBO Problem lösen 
+       $G$ in $U$ einbetten (\enquote{subgraph-embedding}) und somit das Ising/QUBO-Problem lösen 
     \end{block}
-    \begin{itemize}
+    \begin{itemize} \pause
       \item Problem: Einschränkungen auf $U$ (z.B. Anzahl der coupler) übertragen sich auf $G$
-      \begin{itemize}
+      \begin{itemize} \pause
         \item[\textrightarrow] \enquote{dummy}-Vertices mit ferromagnetischer Kopplung einführen
       \end{itemize}
     \end{itemize}
 \end{frame}
 
 \begin{frame}{Minor embedding}
-  \vspace*{1cm}
+  \vspace*{1cm} \pause
   \begin{itemize}
-  \item logischer QUBIT $i$ aus $G$ wird auf subtree $T_i$ physischer QUBITs aus $G_\text{emb} \subset U$ abgebildet
-  \item ferromagnetische Kopplung zwischen \enquote{dummy}-Vertices muss hinreichend groß sein
+  \item logischer QUBIT $i$ aus $G$ wird auf subtree $T_i$ physischer QUBITs aus $G_\text{emb} \subset U$ abgebildet \pause
+  \item ferromagnetische Kopplung zwischen \enquote{dummy}-Vertices muss hinreichend groß sein \pause
   \end{itemize}
   \vspace*{1cm}
-  \begin{varblock}[6cm]{Ziel}
-    Parameter des minor-embedding auf ursprüngliche Ising/QUBO Variablen zurückführen
+  \begin{varblock}[6.4cm]{Ziel}
+    Parameter des minor-embedding auf ursprüngliche Ising/QUBO-Parameter zurückführen
   \end{varblock}
   \vspace*{4cm}
   \begin{textblock*}{6cm}(8.5cm, 4.5cm) % {block width} (coords)
     \includegraphics[width = 6.5cm]{Plots/G_emb.png}
-    \hspace*{12pt}\hbox{\scriptsize {\footnotesize\itshape \href{https://doi.org/10.1016/j.physrep.2012.10.002}{V. Choi, \textit{D-Wave Systems Inc.} (2008)}}}
+    \hspace*{12pt}\hbox{\scriptsize {\footnotesize\itshape \href{https://doi.org/10.1016/j.physrep.2012.10.002}{Choi, V., \textit{D-Wave Systems Inc.} (2008)}}}
   \end{textblock*}
 \end{frame}
 
 \begin{frame}{Minor embedding}
   \begin{itemize}
-    \item $\epsilon^\text{emb}(s_1, \ldots, s_N) = \sum_{i \in V(G_\text{emb})} h_i's_i + \sum_{ij \in E(G_\text{emb})} J_{ij}' s_i s_j $ minimieren
-    \item $\tau : V(G) \times V(G) \to V(U)$, so dass $i_{\tau (i,j)} \in V(T_i), \; j_{\tau (j,i)} \in V(T_j)$ mit $i_{\tau (i,j)} j_{\tau (j,i)} \in E(U)$
-    \item $\text{OE}(G_\text{emb}) = \cup_{ij \in E(G)} i_{\tau (i,j)} j_{\tau (j,i)}$ sind ursprüngliche coupler 
+    \item $\epsilon^\text{emb}(s_1, \ldots, s_N) = \sum_{i \in V(G_\text{emb})} h_i's_i + \sum_{ij \in E(G_\text{emb})} J_{ij}' s_i s_j $ minimieren \pause
+    \item $\tau : V(G) \times V(G) \to V(U)$, so dass $i_{\tau (i,j)} \in V(T_i), \; j_{\tau (j,i)} \in V(T_j)$ mit $i_{\tau (i,j)} \, j_{\tau (j,i)} \in E(U)$ \pause
+    \item $\text{OE}(G_\text{emb}) = \cup_{ij \in E(G)} i_{\tau (i,j)} \, j_{\tau (j,i)}$ sind ursprüngliche coupler \pause
     \begin{itemize}
-      \item[\textrightarrow] $J_{i_{\tau (i,j)} j_{\tau (j,i)}}' = J_{ij}$ für $i_{\tau (i,j)} j_{\tau (j,i)} \in \text{OE}(G_\text{emb})$
+      \item[\textrightarrow] $J_{i_{\tau (i,j)} \, j_{\tau (j,i)}}' = J_{ij}$ für $i_{\tau (i,j)} \, j_{\tau (j,i)} \in \text{OE}(G_\text{emb})$ \pause
     \end{itemize}
-    \item ferromagnetische coupler strength $F_k^{ij}$ für $ij \in E(T_i)$
-    \item bias $h_i$ der logischen QUBITs auf physische QUBITs verteilen 
+    \item ferromagnetische coupler strength $F_k^{ij}$ für $ij \in E(T_i)$ \pause
+    \item bias $h_i$ der logischen QUBITs auf physische QUBITs verteilen  \pause
     \begin{itemize}
-      \item[\textrightarrow] $\sum_{i_k \in V(T_i)} h_{i_k}' = h_i$
-    \end{itemize} 
+      \item[\textrightarrow] $\sum_{i_k \in V(T_i)} h_{i_k}' = h_i$ \pause
+    \end{itemize} s
   \end{itemize}
   \begin{block}{Finale Energie}
     \begin{equation*}
       \epsilon^{\text{emb}}(s_1, \ldots, s_N) = \sum_{i \in V(G)} \left (
         \sum_{i_k \in V(T_i)} h_{i_k}' s_{i_k} + \sum_{i_p i_q \in E(T_i)} F_i^{pq} s_{i_p} s_{i_q} \right ) 
-        + \sum_{ij \in E(G)} J_{ij} s_{i_{\tau(ij)}} s_{j_{\tau(ij)}}
+        + \sum_{ij \in E(G)} J_{ij} s_{i_{\tau(i,j)}} s_{j_{\tau(i,j)}}
     \end{equation*}
   \end{block}
   \begin{textblock*}{6cm}(11cm, 1.7cm) % {block width} (coords)
@@ -599,24 +642,24 @@ per-mode=symbol-or-fraction, % m/s im Text, sonst \frac
 \end{frame}
 
 \section{Fallbeispiel Aisin Corporation}
-\begin{frame}{Fallbeispiel Aisin Corporation}
+\begin{frame}{Fallbeispiel Aisin Corporation} \pause
   \begin{textblock*}{5cm}(11cm, 2cm) % {block width} (coords)
     \includegraphics[width = 7cm]{Plots/ex.pdf}
   \end{textblock*}
   \begin{itemize}
-    \item Zeit für Route $\xi$ : $\text{time}(\xi) = \sum_{t=1}^{k-1} T_{\xi_t, \xi_{t+1}}$
-    \item off-board-demand $D_{ij}$, der von $i$ nach $j$ gebracht werden muss
+    \item Zeit für Route $\xi$ : $\text{time}(\xi) = \sum_{t=1}^{k-1} T_{\xi_t, \xi_{t+1}}$ \pause
+    \item off-board-demand $D_{ij}$, der von $i$ nach $j$ gebracht werden muss \pause
   \end{itemize}
-  Terme für QUBO-Formulierung:
+  Terme für QUBO-Formulierung:\pause
   \begin{itemize}
-    \item $f_\text{local} (\{ x_i \}) = A_\text{local} \sum_t \left ( 1-\sum_i x_{it} \right )^2$
-    \item $f_\text{time} (\{ x_i \}) = A_\text{time} \sum_{ijt} T_{ij} x_{it}x_{jt+1}$
-    \item $f_\text{demand} (\{ x_i \}) = - A_\text{demand} \sum_{ijt} \sum_{\delta = 1}^{\delta_*(t)} D_{ij} x_{it} x_{j t+\delta}$ mit $\delta_*(t) = \text{min}(\delta_\text{max}, \tau -1 -t)$
-    \item $f_\text{nonredundant}^I (\{ x_i \}) = A_{\text{nonredundant}}\sum_{ij} I_{ij} \sum_{\delta = 2}^{\tau - 2} \sum_{t=0}^{\tau - 2 - \delta} x_{it} x_{j t+1} x_{i t+\delta} x_{j t+ 1 +\delta}$
+    \item $f_\text{local} (\{ x_i \}) = A_\text{local} \sum_t \left ( 1-\sum_i x_{it} \right )^2$ \pause
+    \item $f_\text{time} (\{ x_i \}) = A_\text{time} \sum_{ijt} T_{ij} x_{it}x_{jt+1}$ \pause
+    \item $f_\text{demand} (\{ x_i \}) = - A_\text{demand} \sum_{ijt} \sum_{\delta = 1}^{\delta_*(t)} D_{ij} x_{it} x_{j t+\delta}$ mit $\delta_*(t) = \text{min}(\delta_\text{max}, \tau -1 -t)$ \pause
+    \item $f_\text{nonredundant}^I (\{ x_i \}) = A_{\text{nonredundant}}\sum_{ij} I_{ij} \sum_{\delta = 2}^{\tau - 2} \sum_{t=0}^{\tau - 2 - \delta} x_{it} x_{j t+1} x_{i t+\delta} x_{j t+ 1 +\delta}$ \pause
     \begin{itemize}
       \item Vorsicht: Grad des Polynoms muss noch auf zwei reduziert werden
     \end{itemize}
-    \vspace*{0.5cm}
+    \vspace*{0.5cm} \pause
     \begin{equation*}
       A_\text{local} = 5000, \quad A_\text{demand} = 320, \quad A_\text{time} = 0.01\quad A_\text{nonredundant} = 1  
     \end{equation*}

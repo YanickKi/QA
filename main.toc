@@ -1,7 +1,7 @@
 \selectlanguage *{german}
 \beamer@sectionintoc {1}{Einleitung}{3}{0}{1}
-\beamer@sectionintoc {2}{Simulated und quantum annealing}{6}{0}{2}
-\beamer@sectionintoc {3}{Quadratic unconstrained binary optimization}{14}{0}{3}
-\beamer@sectionintoc {4}{Hardware embedding}{21}{0}{4}
-\beamer@sectionintoc {5}{Fallbeispiel Aisin Corporation}{26}{0}{5}
-\beamer@sectionintoc {6}{Zusammenfassung und Ausblick}{29}{0}{6}
+\beamer@sectionintoc {2}{Simulated und quantum annealing}{11}{0}{2}
+\beamer@sectionintoc {3}{Quadratic unconstrained binary optimization}{42}{0}{3}
+\beamer@sectionintoc {4}{Hardware embedding}{66}{0}{4}
+\beamer@sectionintoc {5}{Fallbeispiel Aisin Corporation}{104}{0}{5}
+\beamer@sectionintoc {6}{Zusammenfassung und Ausblick}{116}{0}{6}
