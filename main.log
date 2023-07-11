@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.15.0 (TeX Live 2022)  (format=lualatex 2023.2.25)  12 JUL 2023 00:12
+This is LuaHBTeX, Version 1.15.0 (TeX Live 2022)  (format=lualatex 2023.2.25)  12 JUL 2023 00:22
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -980,12 +980,12 @@ braces):
 >  {german/Localnumeral}  =>  {polyglossia@C@localnumeral}
 >  {german/DefineCommandsCmd}  =>  {xpg_define_language_commands:e}.
 Module polyglossia Info: Language data for german
+(polyglossia)            righthyphenmin	2
+(polyglossia)            synonyms	
 (polyglossia)            hyphenation	
 (polyglossia)            loader	loadhyph-de-1901.tex
 (polyglossia)            patterns	hyph-de-1901.pat.txt
-(polyglossia)            righthyphenmin	2
-(polyglossia)            lefthyphenmin	2
-(polyglossia)            synonyms	 on input line 12
+(polyglossia)            lefthyphenmin	2 on input line 12
 Module polyglossia Info: Language german was not yet loaded; created with id 2 o
 n input line 12
 Package polyglossia Info: Option: German, spelling=new.
@@ -1956,12 +1956,12 @@ LaTeX Info: Redefining \rmfamily on input line 20.
 LaTeX Info: Redefining \sffamily on input line 20.
 LaTeX Info: Redefining \ttfamily on input line 20.
 Module polyglossia Info: Language data for ngerman
+(polyglossia)            righthyphenmin	2
+(polyglossia)            synonyms	
 (polyglossia)            hyphenation	
 (polyglossia)            loader	loadhyph-de-1996.tex
 (polyglossia)            patterns	hyph-de-1996.pat.txt
-(polyglossia)            righthyphenmin	2
-(polyglossia)            lefthyphenmin	2
-(polyglossia)            synonyms	 on input line 20
+(polyglossia)            lefthyphenmin	2 on input line 20
 Module polyglossia Info: Language ngerman was not yet loaded; created with id 3 
 on input line 20
 )
@@ -4041,18 +4041,18 @@ Package luatex.def Info: logos/tu.pdf  used on input line 762.
  [129
 
 ]
-File: logos/tu.pdf Graphic file (type pdf)
-<use logos/tu.pdf>
-Package luatex.def Info: logos/tu.pdf  used on input line 762.
-(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
- [130
-
-]
 LaTeX Font Info:    Font shape `TU/FiraSansLight(0)/m/it' will be
 (Font)              scaled to size 7.64058pt on input line 781.
 File: logos/tu.pdf Graphic file (type pdf)
 <use logos/tu.pdf>
 Package luatex.def Info: logos/tu.pdf  used on input line 781.
+(luatex.def)             Requested size: 140.30132pt x 22.76271pt.
+ [130
+
+]
+File: logos/tu.pdf Graphic file (type pdf)
+<use logos/tu.pdf>
+Package luatex.def Info: logos/tu.pdf  used on input line 790.
 (luatex.def)             Requested size: 140.30132pt x 22.76271pt.
  [131
 
@@ -4060,11 +4060,11 @@ Package luatex.def Info: logos/tu.pdf  used on input line 781.
 <Plots/ising_energy.png, id=1208, 1445.4pt x 550.055pt>
 File: Plots/ising_energy.png Graphic file (type png)
 <use Plots/ising_energy.png>
-Package luatex.def Info: Plots/ising_energy.png  used on input line 786.
+Package luatex.def Info: Plots/ising_energy.png  used on input line 795.
 (luatex.def)             Requested size: 425.24408pt x 161.82837pt.
 File: logos/tu.pdf Graphic file (type pdf)
 <use logos/tu.pdf>
-Package luatex.def Info: logos/tu.pdf  used on input line 786.
+Package luatex.def Info: logos/tu.pdf  used on input line 795.
 (luatex.def)             Requested size: 140.30132pt x 22.76271pt.
  [132
 
@@ -4072,25 +4072,25 @@ Package luatex.def Info: logos/tu.pdf  used on input line 786.
 <Plots/perf.png, id=1217, 1218.5525pt x 811.03pt>
 File: Plots/perf.png Graphic file (type png)
 <use Plots/perf.png>
-Package luatex.def Info: Plots/perf.png  used on input line 791.
+Package luatex.def Info: Plots/perf.png  used on input line 800.
 (luatex.def)             Requested size: 297.66956pt x 198.11626pt.
 File: logos/tu.pdf Graphic file (type pdf)
 <use logos/tu.pdf>
-Package luatex.def Info: logos/tu.pdf  used on input line 791.
+Package luatex.def Info: logos/tu.pdf  used on input line 800.
 (luatex.def)             Requested size: 140.30132pt x 22.76271pt.
  [133
 
 <./Plots/perf.png>]
 File: logos/tu.pdf Graphic file (type pdf)
 <use logos/tu.pdf>
-Package luatex.def Info: logos/tu.pdf  used on input line 796.
+Package luatex.def Info: logos/tu.pdf  used on input line 805.
 (luatex.def)             Requested size: 140.30132pt x 22.76271pt.
 [134
 
 ]
 File: logos/tu.pdf Graphic file (type pdf)
 <use logos/tu.pdf>
-Package luatex.def Info: logos/tu.pdf  used on input line 810.
+Package luatex.def Info: logos/tu.pdf  used on input line 819.
 (luatex.def)             Requested size: 140.30132pt x 22.76271pt.
  [135
 
@@ -4236,22 +4236,22 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 )
 
 Here is how much of LuaTeX's memory you used:
- 45043 strings out of 478290
+ 45044 strings out of 478290
  100000,1977958 words of node,token memory allocated
  13795 words of node memory still in use:
    70 hlist, 9 vlist, 12 rule, 125 disc, 12 local_par, 247 glue, 250 kern, 39 pe
 nalty, 1018 glyph, 168 attribute, 76 glue_spec, 168 attribute_list, 4 write, 42 
 pdf_colorstack, 1 pdf_setmatrix, 1 pdf_save, 1 pdf_restore nodes
-   avail lists: 1:2,2:929,3:452,4:286,5:814,6:57,7:4175,8:78,9:654,10:24,11:340
- 61592 multiletter control sequences out of 65536+600000
- 96 fonts using 31479823 bytes
+   avail lists: 1:2,2:929,3:452,4:286,5:815,6:57,7:4175,8:78,9:654,10:24,11:340
+ 61593 multiletter control sequences out of 65536+600000
+ 96 fonts using 31479867 bytes
  128i,18n,144p,611b,845s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </home/yanick/.local/texlive/2022/texmf-dist/fonts/opentype/public/firamath/Fira
 Math-Regular.otf></home/yanick/.local/texlive/2022/texmf-dist/fonts/opentype/pub
 lic/firamath/FiraMath-Regular.otf></home/yanick/.local/texlive/2022/texmf-dist/f
 onts/opentype/public/firamath/FiraMath-Regular.otf></usr/share/fonts/opentype/fi
 ra/FiraSans-Light.otf></usr/share/fonts/opentype/fira/FiraSans-Medium.otf>
-Output written on main.pdf (135 pages, 7230764 bytes).
+Output written on main.pdf (135 pages, 7230091 bytes).
 
 PDF statistics: 1310 PDF objects out of 1440 (max. 8388607)
  1072 compressed objects within 11 object streams
