@@ -136,10 +136,13 @@ per-mode=symbol-or-fraction, % m/s im Text, sonst \frac
 \end{frame}
 
 \begin{frame}{Traveling Salesman Problem}
+  \begin{textblock*}{7cm}(11cm, 1.6cm)
+    \includegraphics[width = \textwidth]{Plots/ex.pdf}
+  \end{textblock*}
   \pause
   \begin{itemize}
     \setlength\itemsep{1em}
-    \item klassisches kombinatorische Optimierungsproblem
+    \item klassisches kombinatorisches Optimierungsproblem
     \pause
     \item Beispiel: Ein Lieferwagen hat $n$ Lieferorte
     \pause
@@ -149,7 +152,7 @@ per-mode=symbol-or-fraction, % m/s im Text, sonst \frac
     \pause
     \item NP-hard
     \begin{itemize}
-      \item[\textrightarrow] skaliert nicht polynomiell sondern \textbf{exponentiell} mit Systemgröße
+      \item[\textrightarrow] skaliert nicht polynomiell sondern \textbf{exponentiell} mit Systemgröße \pause
     \end{itemize}
     \item Globales Optimum mittels numerischen Lösungsverfahren finden, ist extrem aufwändig
     \pause
@@ -285,21 +288,21 @@ per-mode=symbol-or-fraction, % m/s im Text, sonst \frac
     \item $P_\text{SA}(t)$: Wahrscheinlichkeit System in GZ zu finden
     \item $P_\text{QA}(t)$ = $|\braket{g}{\Psi(t)}|^2$: Wahrscheinlichkeit System in GZ $\ket{g}$ von $H_\text{f}$ zu finden
     \item $P_\text{SA}^{\text{st}}(T)$: Boltzmann-Faktor des GZ von $H_\text{f}$
-    \item $P_\text{QA}^{\text{st}}(\Gamma) = | \braket{g}{\Psi_{\Gamma}} |^2$ mit $\ket{\Psi_{\Gamma}}$ als GZ von $H$
-    \item $\lim_{t \to 0} \Gamma(t) = \lim_{t \to 0} T(t) = \infty$
-    \begin{itemize}}
-      \visible<3->{\item[\textrightarrow] Superposition aller Zustände gleicher Amplitude (QA)
+    \item $P_\text{QA}^{\text{st}}(\Gamma) = | \braket{g}{\Psi_{\Gamma}} |^2$ mit $\ket{\Psi_{\Gamma}}$ als GZ von $H$}
+    \visible<3->{\item $\lim_{t \to 0} \Gamma(t) = \lim_{t \to 0} T(t) = \infty$}
+    \begin{itemize}
+      \visible<4->{\item[\textrightarrow] Superposition aller Zustände gleicher Amplitude (QA)
       \item[\textrightarrow] Alle Zustände gleich wahrscheinlich (SA) }
     \end{itemize}
-    \visible<4->{\item Idealfall (adiabatisch): $\lim_{t \to \infty} P_\text{QA}(t) = \lim_{t \to \infty} P_\text{SA}(t) = 1$}
+    \visible<5->{\item Idealfall (adiabatisch): $\lim_{t \to \infty} P_\text{QA}(t) = \lim_{t \to \infty} P_\text{SA}(t) = 1$}
     \begin{itemize}
-      \visible<5->{\item[\textrightarrow] Grundzustand gefunden}
-      \visible<6->{\item[\textrightarrow] sonst: In einem lokalen Minimum \enquote{hängen} geblieben }
+      \visible<6->{\item[\textrightarrow] Grundzustand gefunden}
+      \visible<7->{\item[\textrightarrow] sonst: In einem lokalen Minimum \enquote{hängen} geblieben }
     \end{itemize}
-    \visible<7->{\item 8 Spins} 
+    \visible<8->{\item 8 Spins} 
   \end{itemize}
   \begin{textblock*}{5cm}(10cm, 4.2cm) % {block width} (coords)
-    \visible<6->{\includegraphics[width = 5.2cm]{Plots/SimAnnealingLandschaft.png}
+    \visible<7->{\includegraphics[width = 5.2cm]{Plots/SimAnnealingLandschaft.png}
     \hspace*{12pt}\hbox{\scriptsize {\footnotesize\itshape \href{https://de.wikipedia.org/wiki/Simulated_Annealing}{Fleischer, K., wikipedia.org}}}}
   \end{textblock*}
   \begin{textblock*}{5cm}(0.5cm, 9cm)
@@ -406,16 +409,17 @@ per-mode=symbol-or-fraction, % m/s im Text, sonst \frac
 \begin{frame}{Binäre Variable}
   \pause
   \begin{itemize}
-    \setlength\itemsep{1em}
     \item $x \in \{0,1\}$ \pause
-    \item Beispiel: Aufenthaltsort von einem Truck
+  \end{itemize}
+  \vspace*{0.4cm}
+  \underline{Beispiel: Aufenthaltsort von einem Truck}
+  \begin{itemize}
+    \setlength\itemsep{1em}
     \item Formulierung als Graph mit $N$ Knoten $i$ \pause
-    \begin{itemize}
-      \item ordne jedem Knoten $i$ eine binäre Variable zu \pause
-      \item jedem Truck kann ein Vektor $x^j = (x^j_1, \ldots, x^j_N)$ von binären Variablen zugeordnet werden 
-    \end{itemize}
+    \item ordne jedem Knoten $i$ eine binäre Variable zu \pause
+    \item jedem Truck kann ein Vektor $x^j = (x^j_1, \ldots, x^j_N)$ von binären Variablen zugeordnet werden  \pause
     \item Truck $j$ an Knoten $i$ \textrightarrow $x^j_i = 1$ sonst $x^j_k = 0$ 
-  \end{itemize} 
+    \end{itemize}
 \end{frame}
 
 \begin{frame}{Binäre Variable}
@@ -493,13 +497,13 @@ per-mode=symbol-or-fraction, % m/s im Text, sonst \frac
   \end{block}
   \begin{itemize}
     \setlength\itemsep{1em}
-    \item $x_i \in \{0,1\}$ als binäre Variable \pause
-    \begin{itemize}
-      \item lässt sich mittels $s_i = 2x_i - 1 \in \{-1, 1\}$ auf Ising-Variablen (\enquote{Spin-1/2}) transformieren \pause
-    \end{itemize}
     \item $Q_{ij}$ definiert Wechselwirkung zwischen $x_i$ \pause
     \begin{itemize}
       \item allg. hermitesch (symmetrisch im Ising-Modell)
+    \end{itemize}
+    \item $x_i \in \{0,1\}$ als binäre Variable \pause
+    \begin{itemize}
+      \item lässt sich mittels $s_i = 2x_i - 1 \in \{-1, 1\}$ auf Ising-Variablen (\enquote{Spin-1/2}) transformieren \pause
     \end{itemize}
   \end{itemize}
 \end{frame}
@@ -515,7 +519,7 @@ per-mode=symbol-or-fraction, % m/s im Text, sonst \frac
     \visible<4->{\item Beispiel: Ein Truck darf sich nur an einem Punkt aufhalten}
     \begin{itemize} 
       \visible<5->{\item $\sum_{i} x_i = 1 \iff \sum_i x_i - 1 = 0$}
-      \visible<6->{\item in QUBO Problem umwandeln \textrightarrow $g = (\sum_i x_i - 1)^2 $}
+      \visible<6->{\item in QUBO-Problem umwandeln \textrightarrow $g = (\sum_i x_i - 1)^2 $}
       \visible<7->{\item[\textrightarrow] $f \to f + \lambda g$ }
       \visible<8->{\item constraint verletzt \textrightarrow Kostenfunktion erhöht}
     \end{itemize}
@@ -551,7 +555,7 @@ per-mode=symbol-or-fraction, % m/s im Text, sonst \frac
       \item Quantum annealer nur für kombinatorische Optimierungsprobleme \pause
       \item Quantencomputer nutzen Quantengatter (unitäre Operationen) \pause
       \begin{itemize}
-        \item kann mehr Probleme lösen \pause
+        \item kann mehr Probleme lösen
       \end{itemize}
     \end{itemize}
   \begin{textblock*}{5cm}(11cm, 2cm) % {block width} (coords)
@@ -643,7 +647,7 @@ per-mode=symbol-or-fraction, % m/s im Text, sonst \frac
   \end{varblock}}
   \vspace*{4cm}
   \begin{textblock*}{6cm}(8.5cm, 4.5cm) % {block width} (coords)
-    \visible<2->{\includegraphics[width = 6.5cm]{Plots/G_emb.png}}
+    \visible<1->{\includegraphics[width = 6.5cm]{Plots/G_emb.png}}
   \end{textblock*}
   \begin{textblock*}{6cm}(0.5cm, 9cm)
     {\footnotesize \href{https://doi.org/10.1016/j.physrep.2012.10.002}{V. Choi, \textit{D-Wave Systems Inc.} (2008)}}
